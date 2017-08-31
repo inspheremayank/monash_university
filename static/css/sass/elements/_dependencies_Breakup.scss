@@ -1,0 +1,123 @@
+/* Dependencies Breakup section
+================================ */
+
+/* Begin choosen select styling */
+.chosen-container {
+    min-height:40px;
+
+    &.chosen-container-single .chosen-single {
+        height:40px;
+        border-color:$border;
+        @include border-radius(2px);
+        @include box-shadow(none);
+        cursor: pointer;
+
+        span {
+            font-weight: $weightRegular;
+            color: $black;
+            @include font-size(15);
+            line-height: 38px
+        }
+
+        div > b {
+            display:none;
+        }
+
+        div:before {
+            @include size(20px);
+            content:"\f107";
+            display:block;
+            padding-top: 9px;
+            margin-left:-8px;
+            vertical-align:top;
+            font-family:"FontAwesome";
+            font-weight: $weightLight;
+            color: $black;
+            @include font-size();
+            cursor: pointer;
+        }
+    }
+
+    &.chosen-container-active {
+        @include box-shadow(none);
+
+        .chosen-single {
+            border-color:$blue;
+        }
+    }
+
+    .chosen-drop {
+        @include border-radius(0px);
+        border:1px solid rgba(0, 0, 0, 0.15);
+        @include box-shadow(0 6px 12px rgba($black, 0.176));
+
+        .chosen-search {
+            padding:2.5px 5px;
+
+            input[type="text"] {
+                height:32px;
+                border-color:$border;
+                @include border-radius(2px);
+                @include box-shadow(none);
+                background-position:100% -21px;
+
+                &:focus {
+                    border-color:$blue;
+                }
+            }
+        }
+
+        .chosen-results {
+            margin:0px;
+            padding:0px;
+            max-height:150px;
+            padding-bottom:5px;
+
+            li {
+                cursor:pointer;
+                padding:2px 5px;
+                text-align:left;
+                border:0px none!important;
+                color: $black;
+                @include font-size();
+                line-height:25px;
+
+                &:hover {
+                    border:0px none!important;
+                    background:#f5f5f5 none repeat scroll 0 0!important;
+                }
+
+                &.highlighted {
+                    border:0px none!important;
+                    background: none repeat scroll 0 0;
+                }
+                &.result-selected {
+                    background:#f5f5f5 none repeat scroll 0 0!important;
+                }
+            }
+        }
+    }
+}
+/* Use this class if Search is not required under Select */
+.cog-select {
+    .chosen-container {
+        .chosen-drop {
+            .chosen-search {
+                input[type="text"] {
+                    display:none;
+                }
+            }
+        }
+    }
+}
+/* End choosen select styling */
+
+.fancybox-inner {
+    .fancybox-content, iframe {
+        background: none !important;
+        overflow: hidden !important;
+        img {
+            @include size($viewportSize); 
+        }
+    }
+}

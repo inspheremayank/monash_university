@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.5,19.95 C7.5,19.95 15,11.797575 15,7.6 C15,3.402425 11.6423438,0 7.5,0 C3.35765625,0 0,3.402425 0,7.6 C0,11.797575 7.5,19.95 7.5,19.95 Z M7.5,8.55 C8.79421875,8.55 9.84375,7.486475 9.84375,6.175 C9.84375,4.863525 8.79421875,3.8 7.5,3.8 C6.20578125,3.8 5.15625,4.863525 5.15625,6.175 C5.15625,7.486475 6.20578125,8.55 7.5,8.55 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Franchise-Homepage" transform="translate(-700.000000, -764.000000)">
+            <g id="Group" transform="translate(701.000000, 765.000000)">
+                <ellipse id="Oval-4" stroke="#202020" stroke-width="1.5" fill="#E25E6D" cx="18" cy="18" rx="18" ry="18"></ellipse>
+                <g id="Poinpin" transform="translate(11.000000, 9.000000)">
+                    <g id="Group-3">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <polygon id="Fill-1" fill="#F9F9F9" mask="url(#mask-2)" points="-0.05625 19.9975 15.01875 19.9975 15.01875 -0.0095 -0.05625 -0.0095"></polygon>
+                    </g>
+                    <path d="M7.5,19.95 C7.5,19.95 15,11.797575 15,7.6 C15,3.402425 11.6423438,0 7.5,0 C3.35765625,0 0,3.402425 0,7.6 C0,11.797575 7.5,19.95 7.5,19.95 Z M7.5,8.55 C8.79421875,8.55 9.84375,7.486475 9.84375,6.175 C9.84375,4.863525 8.79421875,3.8 7.5,3.8 C6.20578125,3.8 5.15625,4.863525 5.15625,6.175 C5.15625,7.486475 6.20578125,8.55 7.5,8.55 Z" id="Stroke-4" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

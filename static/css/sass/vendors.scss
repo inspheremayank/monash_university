@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*
+        Theme Name		: Insphere Client product
+        Description             : This is the official Theme for InSphere
+        Author			: TBA
+        Author URI		: TBA
+ 
+        Version			: 3.5
+        Tags			:css3,blue,green,white,one-column,two-columns,three-columns,fixed-width,responsive-designs,custom-css-menu,full-width-template,sticky-post,theme-options,threaded-comments,translation-ready,bootstrap-ready,fontawesome.
+ 
+        License			: TBA
+        License URI             : TBA
+*/
+
+/* Force Firefox to show broken/missing image placeholders
+------------------------------------------------------------------*/
+@-moz-document url-prefix(http), url-prefix(file) {
+    img:-moz-broken {
+        -moz-force-broken-image-icon:1;
+        width:100%;
+        height:100%;
+    }
+}
+
+/*! ATTENTION:This project uses SASS! Please make your CSS edits in sass/default.scss. */
+
+// Includes
+// ================================
+@import 'vendors/bootstrap/stylesheets/bootstrap';
+@import 'vendors/font-awesome-4.7.0/stylesheets/font-awesome';
+@import 'vendors/fancybox/stylesheets/jquery.fancybox';
+@import 'vendors/chosen-bootstrap/stylesheets/chosen';
+@import 'vendors/owl-carousel/stylesheets/owl.carousel';
+@import 'vendors/owl-carousel/stylesheets/owl.theme.default';
+@import 'vendors/owl-carousel/stylesheets/owl.theme.green';
+ 

@@ -1,0 +1,22 @@
+/* IE trigger hasLayout */
+.hs { zoom: 1; }
+
+/* IE inline block fix */
+.ibf {
+    display: inline;
+    @extend .hs;
+}
+
+/* Border-box */
+.bb {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ls35 {
+    letter-spacing: 0.035em;
+}
+.ls5 {
+    letter-spacing: 0.050em;
+}

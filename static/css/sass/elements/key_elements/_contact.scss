@@ -1,0 +1,57 @@
+/* contact section
+================================ */
+.contact {
+    @include padding-bottom(50px);
+    &__details {
+        h3 {
+            @include padding-top(30px);
+            @include font-size(20);
+            text-align: center; 
+        }
+        &-content {
+            @include padding(30px 0 20px);
+            overflow: hidden;
+            ul {
+                li {
+                    display: flex;
+                    width: $viewportSize;
+                    @include font-size(20);
+                    @media #{$media-tablet} {
+                        flex-direction: column;
+                    }
+                    span {
+                        display: flex;
+                        width: 70%;
+                        @media #{$media-tablet} {
+                            width: $viewportSize;
+                        }
+                        &.head {
+                            width: 30%;
+                            font-weight: $weightBold;
+                            justify-content: flex-end;
+                            &:after {
+                                content: ':';
+                                margin: 0 15px;
+                            }
+                            @media #{$media-tablet} {
+                                width: $viewportSize;
+                                justify-content: flex-start;
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    + li {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .article__form {
+        h4 {
+            @include font-size();
+        }
+    }
+}

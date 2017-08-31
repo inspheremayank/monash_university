@@ -1,0 +1,67 @@
+/* search section
+================================ */
+
+.search, .error {
+    &__heading {
+        @include font-size(30);
+        font-weight: $weightBold;
+    }
+    &__query {
+        font-weight: $weightRegular;
+        font-style: italic;
+    }
+    &__box {
+        max-width: 500px;
+        margin: 0 auto 30px;
+        form {
+            position: relative;
+        }
+        input {
+            width: 100%;
+            @include border-radius(25px);
+            border: 1px solid $border;
+            outline: none;
+            height: 46px;
+            @include padding(0 15px);
+            color: $black;
+        }
+        .button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            @include size(46px);
+            @include padding(0);
+            i {
+                margin-right: 0px;
+                @include font-size(18);
+                line-height: 1;
+            }
+        }
+    }
+    &__error, &__content {
+        text-align: center;
+        margin-top: 40px;
+        &-image {
+            height: 60px;
+            display: block;
+            img {
+                @include size(#{$viewportSize});
+            }
+        }
+        h3 {
+            @include font-size(60);
+            font-weight: $weightBold;
+        }
+        p {
+            @include font-size(20);
+        }
+    }
+    .card__view {
+        margin-top: 40px;
+    }
+    .chosen-container {
+        @media #{$media-ipadSmall} {
+            margin-top: 15px;
+        } 
+    } 
+}

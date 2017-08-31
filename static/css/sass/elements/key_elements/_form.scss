@@ -1,0 +1,14 @@
+/* form section
+================================ */
+
+input { 
+    &.form-control {
+        &.error {
+            border-color: $error;
+            @include placeholder {
+                color: $error;
+            }
+        }
+    }
+}
+

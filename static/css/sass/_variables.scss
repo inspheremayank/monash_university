@@ -1,0 +1,83 @@
+// Colors
+// ================================
+$basebg:                                        #4c721d; 
+$defaultbg:                                     #b0d0bd;
+$baseColor:                                     #525254;
+$border:					#9c9c9c;
+$border2:					#525254;
+$borderlight:					#dddddd;
+$transparent:                                   rgba(0,0,0,0);
+$error:						#d71f29;
+$success:					#40dea0;
+$warning:					#fcba08;
+$info:                                          #129eff;
+$fieldActive:                                   #56b0ef; 
+
+/* Needed ▸ Colors */	
+$offwhite:					#f0f0f0;
+$white:						#ffffff;
+$greyish:					#898989;
+$blk50:						#666666;
+$black:                                         #525254;
+$zblack:					#000000;
+$green:                                         #b0d0bd;
+$brown:                                         #dfcfb8;
+$blue:						#aecad5;
+$grey:						#c2c2c2;
+$cyan:						#00bcd4;
+$red:                                           #898989;
+
+
+/* Social ▸ Colors */
+$facebook:					#3b5998;
+$twitter:					#00aeef;
+$pinterest:                                     #bd081c;
+$googleplus:                                    #e34829;
+$youtube:					#d62423;
+$vimeo:                                         #5bc7ff;
+$instagram:                                     #2c5987;
+$linkedin:					#1f7bc2;
+$flickr:					#377ede;
+
+/* Button Colors */
+$act_Grey:                                      #929292;
+$act_Yellow:                                    #fef200;
+$act_YellowOrange:                              #ffc501;
+$act_Orange:                                    #ff9400;
+$act_RedOrange:                                 #f36523;
+$act_Red:                                       #ee1c25;
+$act_RedViolet:                                 #92278f;
+$act_Violet:                                    #662e91;
+$act_BlueViolet:                                #2e3192;
+$act_Blue:                                      #0054a5;
+$act_BlueGreen:                                 #01a89e;
+$act_Green:                                     #00a652;
+$act_YellowGreen:                               #8dc701;
+
+$account-modal-highlight:                       #00C1CB;
+$account-modal-green:                           #34C87B;
+$account-modal-red:                             #F54E4E;
+$account-modal-blue:                            #e25e6d;
+/* Border ▸ Widths */
+$width:						1px;
+$style:						solid;
+$color:						#dfe2e3;
+
+/* Widths ▸ Window Width */
+$viewportSize:                                  100%;
+$max-width:                                     1920px;
+
+
+
+/* Media Query Breakpoints */
+$media-desktop: "screen and (max-width: 1199px)";
+$media-smallDevices: "screen and (min-width : 1025px) and (max-width : 1199px)";
+$media-ipadLandscape: "screen and (min-width : 992px) and (max-width : 1024px)";
+$media-ipadPortrait: "screen and (max-width :992px)";
+$media-iPad: "screen and (min-width : 768px) and (max-width : 992px)";
+$media-ipadSmall: "screen and (max-width :767px)";
+$media-ipadport: "screen and (min-width :568px) and (max-width:767px)";
+$media-tablet: "screen and (max-width: 599px)";
+$media-smalldevices: "screen and (min-width :568px) and (max-width:992px)";
+$media-iPhoneMedium: "screen and (min-width : 481px) and (max-width : 567px)";
+$media-phone: "screen and (min-width : 200px) and (max-width : 480px)";

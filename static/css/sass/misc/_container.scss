@@ -1,0 +1,28 @@
+/* Widths
+   ================================ */
+$basewidth:		1200px;
+
+$mra:			auto;
+$mla:			auto;
+
+$no-l-padd:		0;
+$no-r-padd:		0;
+
+
+
+$box-shadow-blk: 0 0 8px 0 rgba(0,0,0,0.33);
+
+.col-centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page__bar, .page__navigation {
+    > .container {
+        width: $viewportSize;
+    }
+}
+.mega-width {
+    max-width: $max-width;
+    @extend .col-centered;
+}

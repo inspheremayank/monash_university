@@ -1,0 +1,37 @@
+/* articles section
+================================ */
+.button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    @include padding(10px 16px);
+    display: inline-block;
+    border: 1px solid $transparent;
+    @include font-size(14);
+    line-height: 1;
+    &-block {
+        width: $viewportSize;
+        display: block;
+    }
+    &-rounded {
+        @include border-radius(25px);
+    }
+    &-radius {
+        @include border-radius(4px); 
+    }
+    &-grey {
+        background: $black none repeat scroll 0 0;
+        color: $white !important;
+        border-color: $black;
+        &:hover, &:focus {
+            background: lighten($black, 8%) none repeat scroll 0 0; 
+        }
+    }
+    i {
+        margin-right: 8px;
+    }
+    &:focus {
+        outline: none;
+    }
+}

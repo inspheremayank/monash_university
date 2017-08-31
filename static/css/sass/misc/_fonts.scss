@@ -1,0 +1,151 @@
+/* Global Fonts Path
+   ================================== */
+
+$fonts-montserrat-path:    "../fonts/montserrat";
+$fonts-rubik-path:         "../fonts/rubik";
+$fonts-roboto-path:        "../fonts/roboto";
+
+/* Montserrat Font */
+@font-face {
+    font-family:'montserrathairline';
+    src:url('$fonts-montserrat-path/montserrat-hairline-webfont.eot');
+    src:url('$fonts-montserrat-path/montserrat-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+        url('$fonts-montserrat-path/montserrat-hairline-webfont.woff2') format('woff2'),
+        url('$fonts-montserrat-path/montserrat-hairline-webfont.woff') format('woff'),
+        url('$fonts-montserrat-path/montserrat-hairline-webfont.ttf') format('truetype'),
+        url('$fonts-montserrat-path/montserrat-hairline-webfont.svg#montserrathairline') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'montserratlight';
+    src:url('$fonts-montserrat-path/montserrat-light-webfont.eot');
+    src:url('$fonts-montserrat-path/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('$fonts-montserrat-path/montserrat-light-webfont.woff2') format('woff2'),
+        url('$fonts-montserrat-path/montserrat-light-webfont.woff') format('woff'),
+        url('$fonts-montserrat-path/montserrat-light-webfont.ttf') format('truetype'),
+        url('$fonts-montserrat-path/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'montserratregular';
+    src:url('$fonts-montserrat-path/montserrat-regular-webfont.eot');
+    src:url('$fonts-montserrat-path/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('$fonts-montserrat-path/montserrat-regular-webfont.woff2') format('woff2'),
+        url('$fonts-montserrat-path/montserrat-regular-webfont.woff') format('woff'),
+        url('$fonts-montserrat-path/montserrat-regular-webfont.ttf') format('truetype'),
+        url('$fonts-montserrat-path/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'montserratsemi_bold';
+    src:url('$fonts-montserrat-path/montserrat-semibold-webfont.eot');
+    src:url('$fonts-montserrat-path/montserrat-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('$fonts-montserrat-path/montserrat-semibold-webfont.woff2') format('woff2'),
+        url('$fonts-montserrat-path/montserrat-semibold-webfont.woff') format('woff'),
+        url('$fonts-montserrat-path/montserrat-semibold-webfont.ttf') format('truetype'),
+        url('$fonts-montserrat-path/montserrat-semibold-webfont.svg#montserratsemi_bold') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'montserratbold';
+    src:url('$fonts-montserrat-path/montserrat-bold-webfont.eot');
+    src:url('$fonts-montserrat-path/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('$fonts-montserrat-path/montserrat-bold-webfont.woff2') format('woff2'),
+        url('$fonts-montserrat-path/montserrat-bold-webfont.woff') format('woff'),
+        url('$fonts-montserrat-path/montserrat-bold-webfont.ttf') format('truetype'),
+        url('$fonts-montserrat-path/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* Rubik Font */
+@font-face {
+    font-family: 'RubikRegular';
+    src: url('$fonts-rubik-path/RubikRegular.eot');
+    src: url('$fonts-rubik-path/RubikRegular.eot') format('embedded-opentype'),
+        url('$fonts-rubik-path/RubikRegular.woff2') format('woff2'),
+        url('$fonts-rubik-path/RubikRegular.woff') format('woff'),
+        url('$fonts-rubik-path/RubikRegular.ttf') format('truetype'),
+        url('$fonts-rubik-path/RubikRegular.svg#RubikRegular') format('svg');
+}
+@font-face {
+    font-family: 'RubikMedium';
+    src: url('$fonts-rubik-path/RubikMedium.eot');
+    src: url('$fonts-rubik-path/RubikMedium.eot') format('embedded-opentype'),
+        url('$fonts-rubik-path/RubikMedium.woff2') format('woff2'),
+        url('$fonts-rubik-path/RubikMedium.woff') format('woff'),
+        url('$fonts-rubik-path/RubikMedium.ttf') format('truetype'),
+        url('$fonts-rubik-path/RubikMedium.svg#RubikMedium') format('svg');
+}
+@font-face {
+    font-family: 'RubikBold';
+    src: url('$fonts-rubik-path/RubikBold.eot');
+    src: url('$fonts-rubik-path/RubikBold.eot') format('embedded-opentype'),
+        url('$fonts-rubik-path/RubikBold.woff2') format('woff2'),
+        url('$fonts-rubik-path/RubikBold.woff') format('woff'),
+        url('$fonts-rubik-path/RubikBold.ttf') format('truetype'),
+        url('$fonts-rubik-path/RubikBold.svg#RubikBold') format('svg');
+}
+@font-face {
+    font-family: 'RubikBlack';
+    src: url('$fonts-rubik-path/RubikBlack.eot');
+    src: url('$fonts-rubik-path/RubikBlack.eot') format('embedded-opentype'),
+        url('$fonts-rubik-path/RubikBlack.woff2') format('woff2'),
+        url('$fonts-rubik-path/RubikBlack.woff') format('woff'),
+        url('$fonts-rubik-path/RubikBlack.ttf') format('truetype'),
+        url('$fonts-rubik-path/RubikBlack.svg#RubikBlack') format('svg');
+}
+
+/* Roboto Font */
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('$fonts-roboto-path/RobotoLight.eot');
+    src: url('$fonts-roboto-path/RobotoLight.eot') format('embedded-opentype'),
+        url('$fonts-roboto-path/RobotoLight.woff2') format('woff2'),
+        url('$fonts-roboto-path/RobotoLight.woff') format('woff'),
+        url('$fonts-roboto-path/RobotoLight.ttf') format('truetype'),
+        url('$fonts-roboto-path/RobotoLight.svg#RobotoLight') format('svg');
+}
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('$fonts-roboto-path/RobotoRegular.eot');
+    src: url('$fonts-roboto-path/RobotoRegular.eot') format('embedded-opentype'),
+        url('$fonts-roboto-path/RobotoRegular.woff2') format('woff2'),
+        url('$fonts-roboto-path/RobotoRegular.woff') format('woff'),
+        url('$fonts-roboto-path/RobotoRegular.ttf') format('truetype'),
+        url('$fonts-roboto-path/RobotoRegular.svg#RobotoRegular') format('svg');
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('$fonts-roboto-path/RobotoMedium.eot');
+    src: url('$fonts-roboto-path/RobotoMedium.eot') format('embedded-opentype'),
+        url('$fonts-roboto-path/RobotoMedium.woff2') format('woff2'),
+        url('$fonts-roboto-path/RobotoMedium.woff') format('woff'),
+        url('$fonts-roboto-path/RobotoMedium.ttf') format('truetype'),
+        url('$fonts-roboto-path/RobotoMedium.svg#RobotoMedium') format('svg');
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('$fonts-roboto-path/RobotoBold.eot');
+    src: url('$fonts-roboto-path/RobotoBold.eot') format('embedded-opentype'),
+        url('$fonts-roboto-path/RobotoBold.woff2') format('woff2'),
+        url('$fonts-roboto-path/RobotoBold.woff') format('woff'),
+        url('$fonts-roboto-path/RobotoBold.ttf') format('truetype'),
+        url('$fonts-roboto-path/RobotoBold.svg#RobotoBold') format('svg');
+}
+@font-face {
+    font-family: 'RobotoBlack';
+    src: url('$fonts-roboto-path/RobotoBlack.eot');
+    src: url('$fonts-roboto-path/RobotoBlack.eot') format('embedded-opentype'),
+        url('$fonts-roboto-path/RobotoBlack.woff2') format('woff2'),
+        url('$fonts-roboto-path/RobotoBlack.woff') format('woff'),
+        url('$fonts-roboto-path/RobotoBlack.ttf') format('truetype'),
+        url('$fonts-roboto-path/RobotoBlack.svg#RobotoBlack') format('svg');
+}
+
+

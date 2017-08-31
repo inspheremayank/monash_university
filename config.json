@@ -1,0 +1,59 @@
+{
+    "module": {
+        "event": {
+            "enabled": false
+        },
+        "styling": {
+            "enabled": false
+        },
+        "page": {
+            "contentEditor": {
+                "enabled": true
+            }
+        },
+        "article": {
+            "extendedAttributes": [
+                {
+                    "label" : "Property Address",
+                    "name": "address",
+                    "type": "inputbox",
+                    "placeholder" : "Property Address",
+                    "required": true
+                },
+                {
+                    "name": "features",
+                    "label": "Key Features",
+                    "placeholder": "Add a feature per line",
+                    "type": "textarea"
+                },
+                {
+                    "label" : "Logistics",
+                    "name": "logistics",
+                    "type": "textarea"
+                },
+                {
+                    "label": "Property Type",
+                    "name": "property_type",
+                    "type": "dropdown",
+                    "options": {
+                        "private": "Private",
+                        "public": "Public",
+                        "commercial": "Commercial"
+                    }
+                },
+                {
+                    "label" : "Shoot Types",
+                    "name": "shoot_type",
+                    "type": "checkbox",
+                    "options" : {
+                        "film" : "Film",
+                        "photography" : "Photography",
+                        "video" : "Video",
+                        "events" : "Events",
+                        "productions" : "Productions"
+                    }
+                } 
+            ]
+        }
+    }
+}

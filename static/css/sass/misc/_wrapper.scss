@@ -1,0 +1,17 @@
+/* Scss Document */
+
+.row:before, .row:after,
+.page-header:before, .page-header:after,
+.contact-block:before, .contact-block:after,
+.featured-block:before, .featured-block:after,
+.post-list:before, .post-list:after,
+.modal-footer:before, .modal-footer:after,
+.the-process > ul:before, .the-process > ul:after {
+    content:" ";
+    display:table;
+    font-size:0;
+    line-height:0;
+}
+.row:after, .page-header:after, .contact-block:after, .featured-block:after, .post-list:after, .modal-footer:after, .the-process > ul:after {
+    clear:both;
+}

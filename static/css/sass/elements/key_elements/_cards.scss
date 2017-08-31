@@ -1,0 +1,305 @@
+/* cards section
+================================ */
+.card {
+    &__view {
+        &-content {
+            //min-height: 375px;
+            position: relative;
+            margin-bottom: 25px;
+            display: flex;
+            //height: $viewportSize;
+            .social-icons {
+                display: none;
+            }
+            .favorite {
+                position: absolute;
+                right: 0;
+                top: 0;
+                @include size(50px);
+                @include border-radius(0 4px 4px 4px);
+                text-align: center;
+                i {
+                    color: $white;
+                    @include font-size(20);
+                    line-height: 50px;
+                }
+                &:hover, &:focus {
+                    background: $defaultbg none repeat scroll 0 0;
+                }
+            }
+            figure {
+                height: 250px;
+                @include border-radius(4px);
+                margin-bottom: 15px;
+                position: relative;
+                .social-play {
+                    position: absolute;
+                    @include size($viewportSize);
+                    left: 0;
+                    right: 0;
+                    background: rgba($zblack,0.2);
+                    @include opacity(0);
+                    @include transition(all 0.3s ease);
+                    &:before {
+                        content:'';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        @include translate(-50%,-50%);
+                        @include size(50px);
+                        @include border-radius(50%);
+                        border: 1px solid darken(white, 5%);
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    &:after {
+                        content:'\f04b';
+                        font-family: $iconfont;
+                        @include font-size(20);
+                        color: darken(white, 5%);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        @include translate(-50%,-50%);
+                        cursor: pointer;
+                    }
+                    &:before, &:after {
+                        @include opacity(0);
+                    }
+                }
+                .optionSet {
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    width: 85px;
+                    @include opacity(0);
+                    @include transition(all 0.3s ease);
+                    li {
+                        color: $white;
+                        @include padding(5px 10px);
+                        @include font-size(13);
+                        position: relative;
+                        background: $black none repeat scroll 0 0; 
+                        + li {
+                            border-top: 1px solid darken($white, 8%);
+                        }
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            @include translate(0,-50%);
+                            text-align: center;
+                            width: 30px;
+                        }
+                        &:hover, &:focus {
+                            background: lighten($black, 8%) none repeat scroll 0 0;
+                        } 
+                    }
+                }
+            }
+            a {
+                width: $viewportSize;
+                display: block;
+                &:hover, &:focus {
+                    figure {
+                        .social-play {
+                            background: rgba($zblack,0.5);
+                            @include opacity(1);
+                            &:before, &:after {
+                                @include opacity(0);
+                            }
+                        }
+                    }
+                    .optionSet {
+                        @include opacity(1);
+                    }
+                }
+            }
+            h3 {
+                @include font-size(15);
+                font-weight: $weightBold;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                /* max-height: 50px;
+                overflow: hidden; */
+            }
+            p {
+                @include font-size(14);
+                font-weight: $weightLight;
+                /* max-height: 55px; 
+                overflow: hidden;*/
+                margin-bottom: 0px;
+            }
+            &.active {
+                .favorite {
+                    background: darken($defaultbg, 8%) none repeat scroll 0 0;
+                }
+            }
+            &[class*=" channels__"] {
+                background: none;
+            }
+        }
+        .styles {
+            .card__view-content {
+                text-align: center;
+                //min-height: 330px;
+                border: 1px solid $border2;
+                background-color: #d0cece;
+                @include border-radius(4px);
+                .favorite, p {
+                    display: none;
+                }
+                figure {
+                    margin-bottom: 0px;
+                    @include border-radius(4px 4px 0 0);
+                }
+                h3 {
+                    color: $white;
+                    max-height: inherit;
+                    height: 78px;
+                    margin-bottom: 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include font-size(16);
+                    line-height: 1;
+                }
+                &.channels {
+                    &__1 {
+                        background: $blue none repeat scroll 0 0;
+                    }
+                    &__2 {
+                        background: $green none repeat scroll 0 0;
+                    }
+                    &__3 {
+                        background: $brown none repeat scroll 0 0;
+                    }
+                    &__4 {
+                        background: $grey none repeat scroll 0 0;
+                    }
+                    &__5 {
+                        background: $black none repeat scroll 0 0; 
+                    }
+                }
+            }
+        }
+        /*        .no-image {  
+                    .card__view-content {
+                        @include padding-top(30px);
+                        figure {
+                            display: none;
+                        }
+                        &.active {
+                            .favorite {
+                                i {
+                                    color: $white;
+                                }
+                            }
+                        }
+                        .favorite {
+                            i {
+                                color: $green;
+                            }
+                            &:hover, &:focus {
+                                i {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }*/
+        .video {
+            figure {
+                .social-play {
+                    @include opacity(1);
+                    &:before, &:after {
+                        @include opacity(1);
+                    }
+                }
+            }
+            a {
+                &:hover, &:focus {
+                    figure {
+                        .social-play {
+                            @include opacity(1);
+                            &:before, &:after {
+                                @include opacity(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .social {
+            .card__view-content {
+                .social-icons {
+                    display: block;
+                    text-align: center;
+                    @include size(30px);
+                    @include border-radius(50%);
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 10;
+                    &:before {
+                        content: '';
+                        font-family: $iconfont;
+                        @include font-size(14);
+                        line-height: 30px;
+                        color: $white;
+                    }
+                }
+            }
+            &.facebook {
+                .card__view-content {
+                    .social-icons {
+                        background: $facebook none repeat scroll 0 0;
+                        &:before {
+                            content: '\f09a';
+                        }
+                    }
+                }
+            }
+            &.twitter {
+                .card__view-content {
+                    .social-icons {
+                        background: $twitter none repeat scroll 0 0;
+                        &:before {
+                            content: '\f099';
+                        }
+                    }
+                }
+            }
+            &.vimeo {
+                .card__view-content {
+                    .social-icons {
+                        background: $vimeo none repeat scroll 0 0;
+                        &:before {
+                            content: '\f27d';
+                        }
+                    }
+                }
+            }
+            &.youtube {
+                .card__view-content {
+                    .social-icons {
+                        background: $youtube none repeat scroll 0 0;
+                        &:before {
+                            content: '\f167';
+                        }
+                    }
+                }
+            }
+            &.instagram {
+                .card__view-content {
+                    .social-icons {
+                        background: $instagram none repeat scroll 0 0;
+                        &:before {
+                            content: '\f16d';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

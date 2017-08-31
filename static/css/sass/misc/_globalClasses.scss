@@ -1,0 +1,139 @@
+/* Global classes
+================================ */
+.upper { 
+    text-transform: uppercase; 
+}
+.hide {
+    display: none;
+}
+.fullwidth { 
+    width: $viewportSize !important;
+}
+.green-color {
+    color: $green;
+}
+.white {
+    &__bg {
+        background: $white !important;
+    }
+    &__color {
+        color: $white !important;
+    }
+}
+.red {
+    &__bg {
+        background: $red !important;
+    }
+    &__color {
+        color: $red !important;
+    }
+}
+.badge, .label {
+    &-success {
+        background: $success none repeat scroll 0 0;
+    }
+    &-danger {
+        background: $error none repeat scroll 0 0;
+    }
+    &-warning {
+        background: $warning none repeat scroll 0 0;
+    }
+    &-info {
+        background: $info none repeat scroll 0 0;
+    }
+}
+.image-covered {
+    @include background-size(cover);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.mob__fullwidth {
+    @media #{$media-phone} { 
+        width: $viewportSize;
+    }
+    &-599 {
+        @media #{$media-tablet} {
+            width: $viewportSize;
+        }
+    }
+}
+.page__body {
+    @include padding(120px 0 80px);
+}
+.section {
+    &__head {
+        @include padding(15px 0);
+         h1 {
+             @include font-size(43);
+             font-weight: $weightBold;
+             line-height: 1.2;
+         }
+         h2 {
+             @include font-size(30); 
+             font-weight: $weightBold;
+         }
+         &.no-lineHeight {
+             h1, h2 {
+                 line-height: 1 !important;
+             }
+         }
+    }
+}
+.page__section-head {
+    background-color: $defaultbg;
+    border: 2px solid darken($defaultbg, 8%);
+    border-left: none;
+    border-right: none;
+    h1 {
+        @include padding(30px 0);
+        @include font-size(45);
+        font-weight: $weightBold;
+    }
+    &.bg-image {
+        position: relative;
+        height: 400px;
+        border-top: none;
+        &:before {
+            content:'';
+            background-color: rgba($zblack,0.3);
+            position: absolute;
+            @include size($viewportSize);
+            left: 0;
+            top: 0;
+        }
+        h1 {
+            position: relative;
+            z-index: 1;
+            height: $viewportSize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+        }
+    }
+}
+.channels {
+    &__1 {
+        background: $blue none repeat scroll 0 0;
+    }
+    &__2 {
+        background: $green none repeat scroll 0 0;
+    }
+    &__3 {
+        background: $brown none repeat scroll 0 0;
+    }
+    &__4 {
+        background: $grey none repeat scroll 0 0;
+    }
+    &__5 {
+        background: $black none repeat scroll 0 0; 
+    }
+}
+.no-data {
+    @include font-size();
+    margin: 60px 0 15px; 
+    @include padding(25px 0);
+    background: darken($white, 5%) none repeat scroll 0 0;
+    border: 1px solid darken($white, 8%);
+    @include border-radius(4px);
+}

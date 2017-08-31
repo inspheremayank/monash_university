@@ -1,0 +1,88 @@
+/* Tab View
+================================ */
+
+.tab {
+    &__view {
+        margin-top: 15px;
+        ul {
+            li{
+                display: inline-flex;
+                margin-bottom: 25px;
+                + li {
+                    margin-left: 30px;
+                }
+            }
+            @media #{$media-tablet} {
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    display: inline-block;
+                    width: calc(#{$viewportSize} / 3);
+                    + li {
+                        margin-left: 0px;
+                    }
+                    &:nth-child(4) {
+                        margin-left: calc(#{$viewportSize} - 83.333%); 
+                    }
+                }
+            }
+        }
+    }
+    &__rounded {
+        ul li {
+            text-align: center;
+            @include opacity(0.3);
+            @include transition(all 0.3s ease); 
+            span {
+                @include size(50px);
+                @include border-radius(50%);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                color: $white;
+                img {
+                    width: 60%;
+                }
+            }
+            &.active, &:hover, &:focus {
+                @include opacity(1);
+                @include transition(all 0.3s ease);
+            }
+            &.channels__1 {
+                background: none;
+                span {
+                    background: $blue none repeat scroll 0 0;
+                }
+            }
+            &.channels__2 {
+                background: none;
+                span {
+                    background: $green none repeat scroll 0 0;
+                }
+            }
+            &.channels__3 {
+                background: none;
+                span {
+                    background: $brown none repeat scroll 0 0;
+                }
+            }
+            &.channels__4 {
+                background: none;
+                span {
+                    background: $grey none repeat scroll 0 0;
+                }
+            }
+            &.channels__5 {
+                background: none;
+                span {
+                    background: $black none repeat scroll 0 0;
+                }
+            }
+            a {
+                @include font-size(14);
+            }
+        }
+    }
+}

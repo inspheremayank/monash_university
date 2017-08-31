@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="28px" viewBox="0 0 17 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Theme---Members---TAB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Members---Light---Home---TAB" transform="translate(-19.000000, -359.000000)" fill="#ECECEC">
+            <g id="Upcoming-events" transform="translate(2.000000, 326.000000)">
+                <g id="Pagination" transform="translate(17.000000, 33.000000)">
+                    <g id="Arrow-Left" transform="translate(8.500000, 14.000000) rotate(-180.000000) translate(-8.500000, -14.000000) ">
+                        <path d="M11.936826,14.0581464 L1.48479437,24.5101781 L0.424134202,25.5708382 L2.54545455,27.6921586 L3.60611472,26.6314984 L15.176953,15.0606602 L16.2376131,14 L14.1162928,11.8786797 L14.0581464,11.936826 L3.33338744,1.2120671 L2.27272727,0.151406929 L0.151406929,2.27272727 L1.2120671,3.33338744 L11.936826,14.0581464 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

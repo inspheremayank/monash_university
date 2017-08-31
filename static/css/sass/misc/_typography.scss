@@ -1,0 +1,286 @@
+/* --------------------------------------------------------------
+
+   typography.css
+   * Sets up some sensible default typography.
+
+-------------------------------------------------------------- */
+/* FONT PATH
+ * -------------------------- */
+
+
+/* Montserrat Font */
+$montserrathairline:                    'montserrathairline', Arial, sans-serif;
+$montserratlight:	 		'montserratlight', Arial, sans-serif;
+$montserratregular:                     'montserratregular', Arial, sans-serif;
+$montserratsemibold:                    'montserratsemi_bold', Arial, sans-serif;
+$montserratbold:	 		'montserratbold', Arial, sans-serif;
+
+/* Rubik Font */
+$rubikregular:				'RubikRegular', Arial, sans-serif;
+$rubikmedium:				'RubikMedium', Arial, sans-serif;
+$rubikbold:				'RubikBold', Arial, sans-serif;
+$rubikblack:				'RubikBlack', Arial, sans-serif;
+
+/* Roboto Font */
+$robotolight:                           'RobotoLight', Arial, sans-serif;
+$robotoregular:                         'RobotoRegular', Arial, sans-serif;
+$robotomedium:                          'RobotoMedium', Arial, sans-serif;
+$robotobold:                            'RobotoBold', Arial, sans-serif;
+$robotoblack:                           'RobotoBlack', Arial, sans-serif;
+
+/* Open Sans Font */
+$opensans:                              'Open Sans', Arial, sans-serif;
+
+
+$iconfont:	 			'FontAwesome';
+$illustrationfont: 			'insphere-icons';
+
+.type-sans	 			{ font-family: $montserratlight; }
+
+.is {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $illustrationfont;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Font Sizing
+// ================================
+$baseFontSize:                          1rem;
+
+
+$uppercase:                             uppercase;
+
+// Styles
+// ================================
+
+/* Primary Fonts Style */
+$primaryFont:                           $opensans;
+/*$primaryFont-thin:                      $montserrathairline;
+$primaryFont-light:                     $montserratlight;
+$primaryFont-regular:                   $montserratregular;
+$primaryFont-medium:                    $montserratregular;
+$primaryFont-semibold:                  $montserratsemibold;
+$primaryFont-bold:                      $montserratbold;
+$primaryFont-black:                     $montserratregular;*/
+
+/* Secondary Fonts Style */
+
+/*$secondaryFont-thin:                    $montserratregular;
+$secondaryFont-light:                   $robotolight;
+$secondaryFont-regular:                 $robotoregular;
+$secondaryFont-medium:                  $robotomedium;
+$secondaryFont-semibold:                $montserratregular;
+$secondaryFont-bold:                    $robotobold;
+$secondaryFont-black:                   $robotoblack;*/
+
+/* Ternary Fonts Style */
+
+/* $ternaryFont-thin:                      $montserratregular; 
+$ternaryFont-light:                     $montserratregular;
+$ternaryFont-regular:                   $rubikregular;
+$ternaryFont-medium:                    $rubikmedium;
+ $ternaryFont-semibold:                  $montserratregular; 
+$ternaryFont-bold:                      $rubikbold;
+$ternaryFont-black:                     $rubikblack;*/
+
+
+$weightLight:                           300;
+$weightRegular:                         400;
+$weightSemibold:                        600;
+$weightBold:                            700;
+$weightUltabold:                        900;
+
+strong, .strong { 
+    font-weight: 700; 
+}
+em, .em { 
+    font-style: italic; 
+}
+
+
+/* Weight
+   ================================ */
+$w200:					200!important;
+$w300:					300!important;
+$w400:					400!important;
+$w600:					600!important;
+$w700:					700!important;
+$w900:					900!important;
+
+
+// Text Decoration
+// ================================
+.txt-dec-none 			{ text-decoration: none; }
+
+// Defaults
+// ================================
+html, body {
+    font-family: 		$primaryFont;
+    font-size:                  $baseFontSize;
+    color: 			$greyish;
+}
+
+// Headings
+// ================================
+h1, h2, h3 {
+    font-family: $primaryFont;
+}
+h4, h5, h6 {
+    font-family: $primaryFont;
+}
+.form-section h2{
+    font-family: $primaryFont; 
+}
+.header-heading {
+    margin-bottom: 15px; 
+}
+
+
+// Links
+// ================================
+a, a:link, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Typography
+------------------------------------*/
+h1 {
+    line-height: 1.6;
+}
+
+h2 {
+    line-height: 1.5;
+}
+
+h3 {
+    line-height: 1.4;
+}
+
+h4 {
+    line-height: 1.3;
+}
+
+h5 {
+    line-height: 1.2;
+}
+
+h6 {
+    line-height: 1.2;
+}
+
+p {
+    /* color: $darkgrey; */
+    @include font-size(14); 
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    position: relative;
+    li {
+        @include text-md($line-height: 1.4, $font-weight: 300);
+        list-style: none;
+        a {
+            &:hover {
+                text-decoration: none;
+                @include transition(all 0.3s ease-in);
+            }
+        }
+    }
+}
+
+ol {
+    li {
+        list-style-position: outside;
+    }
+}
+
+.marker-list li {
+    list-style: square;
+    list-style-position: inside;
+}
+
+iframe {
+    border: none;
+}
+
+q {
+    @include text-md($line-height: 1.4, $font-weight: 300);
+    @include font-size(18);
+    font-style: italic;
+    color: $black;
+}
+
+
+
+
+/* 
+ Pixel to REM
+
+10px 	0.625rem
+11px 	0.6875rem
+12px 	0.75rem
+13px 	0.8125rem
+14px 	0.875rem
+15px 	0.9375rem
+16px 	1rem
+17px 	1.0625rem
+18px 	1.125rem
+19px 	1.1875rem
+20px 	1.25rem
+21px 	1.3125rem
+22px 	1.375rem
+23px 	1.4375rem
+24px 	1.5rem
+25px 	1.5625rem
+26px 	1.625rem
+27px 	1.6875rem
+28px 	1.75rem
+29px 	1.8125rem
+30px 	1.875rem
+31px 	1.9375rem
+32px 	2rem
+33px 	2.0625rem
+34px 	2.125rem
+35px 	2.1875rem
+36px 	2.25rem
+37px 	2.3125rem
+38px 	2.375rem
+39px 	2.4375rem
+40px 	2.5rem
+41px 	2.5625rem
+42px 	2.625rem
+43px 	2.6875rem
+44px 	2.75rem
+45px 	2.8125rem
+46px 	2.875rem
+47px 	2.9375rem
+48px 	3rem
+49px 	3.0625rem
+50px 	3.125rem
+51px 	3.1875rem
+52px 	3.25rem
+53px 	3.3125rem
+54px 	3.375rem
+55px 	3.4375rem
+56px 	3.5rem
+57px 	3.5625rem
+58px 	3.625rem
+59px 	3.6875rem
+60px 	3.75rem
+61px 	3.8125rem
+62px 	3.875rem
+63px 	3.9375rem
+64px 	4rem
+
+*/

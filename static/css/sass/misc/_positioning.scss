@@ -1,0 +1,65 @@
+/* Floats
+   ================================ */
+.pull-left { 
+    float: left; 
+}
+.pull-right { 
+    float: right; 
+}
+
+.clear:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+.clear { 
+    clear: both; 
+}
+
+.tc { 
+    display: table-cell;
+}
+
+/* Alignment
+   ================================ */
+.alignright {
+    @extend .pull-right;
+    margin: 0 0 20px 20px;
+}
+
+.alignleft {
+    @extend .pull-left;
+    margin: 0 20px 20px 0;
+}
+
+.aligncenter {
+    @extend .clear;
+    display: block;
+    margin: 20px auto;
+}
+
+.alignnone { 
+    margin: 0 0 20px 20px; 
+}
+
+.txt-l { 
+    text-align: left; 
+}
+.txt-c { 
+    text-align: center; 
+}
+.txt-r { 
+    text-align: right; 
+}
+.txt-t { 
+    vertical-align: top; 
+}
+.txt-m { 
+    vertical-align: middle; 
+}
+.txt-b { 
+    vertical-align: bottom; 
+}

@@ -1,0 +1,46 @@
+/* blog section
+================================ */
+.blog {
+    @include padding-bottom(50px);
+    .section__head {
+        @include padding-top(50px);
+        h1 {
+            @include font-size(30);
+        }
+    }
+    .tab__view { 
+        @include padding-bottom(30px);
+    }
+}
+/* Begin user info section */
+.userProfile {
+    margin: 50px 0;
+    &__info {
+        width: 80%;
+        border: 1px solid $border;
+        @include border-radius(4px);
+        @include padding(40px 0);
+        &-image {
+            @include size(100px);
+            @include border-radius(50%);
+            margin-bottom: 15px;
+        }
+        &-name {
+            @include font-size(20);
+            margin: 15px 0;
+            font-weight: $weightBold;
+        }
+        &-description {
+            @include font-size(16);
+            margin: 15px 0;            
+        }
+    }
+    &__activity {
+        @media #{$media-ipadSmall} {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+/* End user info section */
