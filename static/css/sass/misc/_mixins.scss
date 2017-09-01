@@ -266,7 +266,7 @@
 }
 
 
-@mixin font-size($sizeValue: 16, $line: $sizeValue * 1.5) {
+@mixin font-size($sizeValue: 16, $line: $sizeValue * 1.2) {
     font-size: ($sizeValue / 16) + rem;
     line-height: ($line / 16) + rem;
 }

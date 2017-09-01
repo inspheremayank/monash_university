@@ -8,34 +8,12 @@
  * -------------------------- */
 
 
-/* Montserrat Font */
-$montserrathairline:                    'montserrathairline', Arial, sans-serif;
-$montserratlight:	 		'montserratlight', Arial, sans-serif;
-$montserratregular:                     'montserratregular', Arial, sans-serif;
-$montserratsemibold:                    'montserratsemi_bold', Arial, sans-serif;
-$montserratbold:	 		'montserratbold', Arial, sans-serif;
-
-/* Rubik Font */
-$rubikregular:				'RubikRegular', Arial, sans-serif;
-$rubikmedium:				'RubikMedium', Arial, sans-serif;
-$rubikbold:				'RubikBold', Arial, sans-serif;
-$rubikblack:				'RubikBlack', Arial, sans-serif;
-
-/* Roboto Font */
-$robotolight:                           'RobotoLight', Arial, sans-serif;
-$robotoregular:                         'RobotoRegular', Arial, sans-serif;
-$robotomedium:                          'RobotoMedium', Arial, sans-serif;
-$robotobold:                            'RobotoBold', Arial, sans-serif;
-$robotoblack:                           'RobotoBlack', Arial, sans-serif;
-
 /* Open Sans Font */
-$opensans:                              'Open Sans', Arial, sans-serif;
+$robotocondensed:                       'Roboto Condensed', Arial, sans-serif;
 
 
 $iconfont:	 			'FontAwesome';
 $illustrationfont: 			'insphere-icons';
-
-.type-sans	 			{ font-family: $montserratlight; }
 
 .is {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -63,7 +41,7 @@ $uppercase:                             uppercase;
 // ================================
 
 /* Primary Fonts Style */
-$primaryFont:                           $opensans;
+$primaryFont:                           $robotocondensed;
 /*$primaryFont-thin:                      $montserrathairline;
 $primaryFont-light:                     $montserratlight;
 $primaryFont-regular:                   $montserratregular;
@@ -103,7 +81,7 @@ strong, .strong {
     font-weight: 700; 
 }
 em, .em { 
-    font-style: italic; 
+    font-style: italic;  
 }
 
 

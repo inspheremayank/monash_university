@@ -1,2 +1,53 @@
 {% set network = _Network.getNetworkData() %}
 {{set(this,'title',(network.title))}}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-full single'}) | raw }}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="category__wrapper">
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="category__wrapper-content">
+                            <div class="category__wrapper-content-heading">
+                                Headlines
+                                <span class="date">25 August 2017</span>
+                            </div>
+                            <div class="category__wrapper-content-tags">
+                                Headlines
+                                <span class="date">25 August 2017</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third'}) | raw }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

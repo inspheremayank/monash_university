@@ -1,181 +1,39 @@
 /* Page Header section
 ================================ */
-
 .header {
-    @include padding(30px 0);
-    background: $defaultbg none repeat scroll 0 0;
-    &__section {
-        position: relative;
-        &-logo {
-            @media #{$media-ipadPortrait} {
-                //width: calc(#{$viewportSize} / 2);
+    @include padding(23px 15px);
+    position: fixed;
+    z-index: 999;
+    width: $viewportSize;
+    @include transition(all 0.3s ease);
+    &__fixed {
+        background: rgba($white, 0.9) none repeat scroll 0 0;
+        @include padding(15px);
+        .logo {
+            &__main {
+                display: none !important;
             }
-            a {
-                max-width: 200px;
-                height: 65px;
-                display: flex;
-                align-items: center;
-                img {
-                    object-fit: cover;
-                    margin: 0px; 
-                }
-            }
-        }
-        &-navigation {
-            width: $viewportSize;
-            .navigation {
-                &__main {
-                    .navigation__search {
-                        display: none;
-                    } 
-                    @media #{$media-ipadPortrait} {
-                        display: none !important;
-                    }
-                }
-                &__main, &__user {
-                    ul {
-                        li {
-                            display: inline-block;
-                            position: relative;
-                            + li {
-                                margin-left: 20px;
-                            }
-                            .sub-menu, .sub-sub-menu {
-                                position: absolute;
-                                width: 150px;
-                                top: 50px;
-                                visibility: hidden;
-                                @include opacity(0);
-                                @include transition(all 0.3s ease-in);
-                                background: $white none repeat scroll 0 0;
-                                @include border-radius(4px);
-                                border: 2px solid #faf9f9;
-                                @include box-shadow(0 2px 6px -1px rgba($black, 0.4));
-                                z-index: 100;
-                                li {
-                                    width: $viewportSize;
-                                    color: $black;
-                                    @include font-size(14);
-                                    a {
-                                        @include padding(8px 15px);
-                                        display: flex;
-                                        justify-content: space-between;
-                                        align-items: center;
-                                    }
-                                    + li {
-                                        margin-left: 0px;
-                                    }
-                                }
-                                &-right {
-                                    right: 0; 
-                                }
-                            }
-                            .sub-sub-menu {
-                                left: -155px;
-                            }
-                            .sub-menu {
-                                li {
-                                    &:hover, &:focus {
-                                        .sub-sub-menu {
-                                            visibility: visible; 
-                                            @include opacity(1);
-                                            top: 0;
-                                        }
-                                    }
-                                }
-                            }
-                            &:hover, &:focus,&.active {
-                                color: $zblack;
-                                .sub-menu {
-                                    top: 35px;
-                                    visibility: visible; 
-                                    @include opacity(1);
-                                    li {
-                                        &:hover {
-                                            color: $defaultbg;
-                                        }
-                                    }
-                                }
-                            }
-                            a {
-                                @include font-size(14);
-                            }
-                        }
-                    }
-                }
-                &__user {
-                    @media #{$media-ipadPortrait} {
-                        margin-right: 50px;
-                        .dropdown-menu-right {
-                            right: 50px;
-                            left: auto !important;
-                        }
-                    }
-                    &-login {
-                        margin-left: 20px;
-                        li {
-                            font-weight: $weightBold;
-                            + li {
-                                margin-left: 5px !important;
-                                &:before {
-                                    content: '|';
-                                    margin-right: 5px;
-                                }
-                            }
-                        }
-                    }
-                    &-loginProfile {
-                        margin-left: 20px;
-                        &-image {
-                            @include size(40px);
-                            cursor: pointer;
-                        }
-                        .dropdown-menu {
-                            .dropdown-item {
-                                @include padding(8px 15px);
-                                @include font-size(14);
-                            }
-                        }
-                    }
-                }
-                &__search {
-                    display: flex;
-                    margin-left: 15px;
-                    align-items: center;
-                    @media #{$media-ipadPortrait} {
-                        display: none;
-                    }
-                    .form-control {
-                        background: none repeat scroll 0 0;
-                        border: none;
-                        border-bottom: 2px solid $white;
-                        @include border-radius(0);
-                        @include padding(0);
-                        @include transition(all 0.3s ease);
-                        width: 0px;
-                        height: 40px;
-                        color: $black;
-                        @include font-size(14);
-                    }
-                    .button {
-                        @include padding(0);
-                        @include size(40px);
-                        background: $white none repeat scroll 0 0;
-                        @include border-radius(50%);
-                        i {
-                            color: $black;
-                            margin: 0px;
-                        }
-                    }
-                    &.active {
-                        .form-control {
-                            width: 200px;
-                            margin-right: -18px; 
-                            @include padding(8px 25px 8px 12px);
-                        }
-                    }
-                }
+            &__scroll {
+                display: block !important;
             }
         }
     }
+    &__main {
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            &__main {
+                display: block;
+                height: 50px;
+            }
+            &__scroll {
+                display: none;
+                height: 35px;
+            }
+        }
+    }
+}
+
+.wrapper {
+    height:2000px;
 }

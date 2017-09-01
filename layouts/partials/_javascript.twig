@@ -1,14 +1,26 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-<script src="http://vjs.zencdn.net/5.4.6/video.min.js"></script>
-<!-- jQuery local fallback -->
-<script>
-    window.jQuery || document.write('<script src="js/min/jquery-1.11.2.min.js"><\/script>')
-</script>
-<!-- JS Locals -->
-<script src="{{network.templatePath}}/static/js/min/bootstrap.min.js"></script>
-<script src="{{network.templatePath}}/static/js/min/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-<script src="{{network.templatePath}}/static/js/min/retina.min.js"></script>
-<script src="{{network.templatePath}}/static/js/min/jquery.waypoints.min.js"></script>
-<script src="{{network.templatePath}}/static/js/min/flickity.pkgd.min.js"></script>
-<script src="{{network.templatePath}}/static/js/min/scripts-min.js"></script>
+{% if _AppHelper.getApplicationEnv() == 'PROD'%}
+    <script type="text/javascript" src="{{network.templatePath}}/static/deploy/theme.min.js?rel=1503638899585"></script>
+{% else %}
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/jquery/js/jquery-migrate-1.2.1.min.js?ver=1.2.1"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/bootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/fancybox/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/chosen-bootstrap/js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/owl-carousel/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/handlebars-v4.0.5.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/jquery.validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/plugins/jquery.noty-2.3.8/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/js/app.js"></script>
+    
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/auth.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/account-modal.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/login.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/home.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/common.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/_article-templates.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/user-articles.js"></script>
+    <script type="text/javascript" src="{{network.templatePath}}/static/dev/js/search.js"></script>
+{% endif %}
+<script type="text/javascript" src="https://d31nhj1t453igc.cloudfront.net/sdk/sdk-v1.0.0.min.js"></script>

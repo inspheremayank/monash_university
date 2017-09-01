@@ -35,61 +35,15 @@ $('.responsive-standalone li.dropdown').on('click', function() {
 /***********************************/
 /* card favourite toggle class */
 /**********************************/
+var start = $('.header').offset().top;
 
-$(".card__view-content .favorite").on('click', function(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    $(this).parents('.card__view-content').toggleClass('active');
-    
-});
-
-$(".search-section input").on('focus', function() {
-    $(this).closest(".input-group").addClass("active");
-});
-$('.search-section input').on('blur', function() {
-    if( !$(this).val() ) {
-           $(this).closest(".input-group").removeClass("active");
+$.event.add(window, "scroll", function () {
+    var p = $(window).scrollTop();
+    if (p > start) {
+        $('.header').addClass('header__fixed');
+    } else {
+        $('.header').removeClass('header__fixed');
     }
-});
-$(".desktop-search .button").on('click', function() {
-    var searchActive = $(this).parent(".desktop-search");
-    var data = $(this).parent(".desktop-search").find('input').val();
-    if(searchActive.hasClass('active') && data === "") { 
-       searchActive.removeClass("active");
-       $(this).find('.fa').addClass('fa-search').removeClass('fa-close');
-    }
-    else {
-       searchActive.addClass("active"); 
-       $(this).find('.fa').removeClass('fa-search').addClass('fa-close');
-    }
-    return false;
-});
-
-$("#desktopSearch").on('keypress', function(e){
-   if(e.which === 13) {
-       $('#headerSearchForm').submit();
-   }
-});
-
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        responsiveClass: true,
-        nav: true,
-        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
 });
 
 $(".chzn-select").chosen({width: '100%', disable_search: true});

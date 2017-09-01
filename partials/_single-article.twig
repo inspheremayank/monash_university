@@ -1,0 +1,21 @@
+{% set bgImage = "background-image: url('"~network.templatePath~"/static/images/demo.jpg');" %} 
+<div class="card__view {{class}}">
+    <a href="javascript:;">
+        <div  class="card__view-content">
+            <div class="mask"></div>
+            <figure class="image-covered" style="{{bgImage}}"></figure>
+            <div class="content__section">
+                <div class="content__section-channel">Technology</div>
+                <h1 class="content__section-heading">The Rise of Automation</h1>
+                <p class="content__section-description">How will the future look  when all we do is watch?</p>
+                <div class="content__section-userInfo">
+                    <div class="content__section-userInfo-image image-covered" style="{{bgImage}}"></div>
+                    <div class="content__section-userInfo-content">
+                        <span>Victoria Atkins</span>
+                        <span class="designation">Philosopher, thinker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

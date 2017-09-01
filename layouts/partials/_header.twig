@@ -1,53 +1,24 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="header-nav-wrapper">
-            {% set mainLogo = network.templatePath~'/static/images/synthetica-logo.png' %}
-            {% set logoUrl = network.networkLogoLinkUrl %}
-            {% set logoTitle = 'Synthetica Freebie' %}
-            {% if network.logoMedia | length > 0 %}
-                {% set mainLogo = _Media.getMediaUrl(network.logoMedia, 200, 85) %}
-                {% set logoTitle = network.title %}
-            {% endif %}
-            <div class="logo">
-                <a href="{{logoUrl}}"><img src="{{mainLogo}}" alt="{{network.title}}"></a>
-            </div>
-            <div class="primary-nav-wrapper">
-                {% set mainMenu = blog.blogHeaderMenu %}
-                <nav>
-                    <ul class="primary-nav">
-                        {% for i in 0..3 %}
-                            {% set activeMenu =  %}
-                            {% set childMenu =  %}
-                            {% if mainMenu[i] is defined %}
-                                <li>
-                                    <a href="{{mainMenu[i].link | raw}}">
-                                        {{((mainMenu[i].label is empty) ? ((mainMenu[i].pageTitle is empty) ? mainMenu[i].blogTitle : mainMenu[i].pageTitle) : mainMenu[i].label)}}
-                                    </a>
-                                </li>
-                            {% endif  %}
-                        {% endfor %}
-                    </ul>
-                </nav>
-                <div class="secondary-nav-wrapper">
-                    <ul class="secondary-nav">
-                        <li class="subscribe"><a href="#get-started">Subscribe</a></li>
-                        <li class="search"><a href="#search" class="show-search"><i class="fa fa-search"></i></a></li>
-                    </ul>
+<header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="header__main d-flex">
+                    <aside class="header__main-left">
+                        <div class="header__main-logo">
+                            {% set mainLogo = network.templatePath~'/static/images/logo-white.svg' %}
+                            {% set mainLogoScroll = network.templatePath~'/static/images/logo.svg' %}
+                            
+                            <a href="javascript:;">
+                                <img class="logo__main img-fluid" src="{{mainLogo}}" alt="image" />
+                                <img class="logo__scroll img-fluid" src="{{mainLogoScroll}}" alt="image" />
+                            </a>
+                        </div>
+                    </aside>
+                    <aside class="header__main-right">
+                        sdsd
+                    </aside>
                 </div>
-                <div class="search-wrapper">
-                    <ul class="search">
-                        <li>
-                            <input type="text" id="search-input" placeholder="Start typing then hit enter to search">
-                        </li>
-                        <li>
-                            <a href="#" class="hide-search"><i class="fa fa-close"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="navicon">
-                <a class="nav-toggle" href="#"><span></span></a>
             </div>
         </div>
     </div>
-</div>
+</header>
