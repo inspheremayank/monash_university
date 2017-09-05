@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header header__fixed">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -16,7 +16,15 @@
                     </aside>
                     <aside class="header__main-right">
                         <div class="navigation__main d-flex align-items-center">
-                            
+                            <div class="navigation__login">
+                                <div class="navigation__login-nav">
+                                    <a href="javascript:;">Login</a>
+                                    <a href="javascript:;">Signup</a>
+                                </div>
+                                <div class="navigation__login-user">
+                                    sd
+                                </div>
+                            </div>
                             <form action="{{ url('search') }}" method="GET" id="headerSearchForm">
                                 <div class="navigation__search desktop-search">
                                     <input class="form-control" id="desktopSearch" name="s" type="text" autocomplete="off" placeholder="Search here" />
@@ -32,10 +40,23 @@
                                     </div>
                                 </form>
                                 <ul>
-                                    <li><a href="@stories">Stories</a></li>
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/list-a-space">List A Space</a></li>
-                                    <li><a href="/enquire-now">Enquire</a></li>
+                                    <li><a href="javascript:;">Medicine and Health</a></li>
+                                    <li><a href="javascript:;">Business and Economy</a></li>
+                                    <li><a href="javascript:;">Politics and Society</a></li>
+                                    <li><a href="javascript:;">Education</a></li>
+                                    <li><a href="javascript:;">Innovation</a></li>
+                                    <li><a href="javascript:;">Environment</a></li>
+                                    <li><a href="javascript:;">Design and Architecture</a></li>
+                                    <li><a href="javascript:;">Technology</a></li>
+                                </ul>
+                                <ul class="small-text">
+                                    <li><a href="javascript:;">Terms of use</a></li>
+                                    <li><a href="javascript:;">Privacy policy</a></li>
+                                    <li><a href="javascript:;">About</a></li>
+                                    <li><a href="javascript:;">Monash university</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">Subscribe</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -44,7 +65,7 @@
             </div>
         </div>
     </div>
-     <!-- Begin Responsive Profile -->
+    <!-- Begin Responsive Profile -->
     <div class="responsive-standalone">
         <a href="javascript:;" class="responsive-standalone-close"><span class="fa fa-close" aria-hidden="true"></span></a>
         <div class="standalone-menu"></div>

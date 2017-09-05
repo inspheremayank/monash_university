@@ -15,6 +15,9 @@
             display: none;
         }
     }
+    &__login {
+        
+    }
     &__search {
         display: flex;
         align-items: center;
@@ -50,8 +53,10 @@
             margin-right: 0px;
             position: relative;
             @include padding(0 20px);
+            margin-bottom: 15px;
             .form-control {
                 width: $viewportSize;
+                color: $white;
             }
             .button {
                 position: absolute;
@@ -111,7 +116,7 @@
     }
     &-close {
         top: 1.5em;
-        right: 1.5em;
+        right: 0;
         z-index: 100;
         position: absolute;
         @include font-size(20);
@@ -144,13 +149,16 @@
     .standalone-menu {
         @include padding-top(80px);
         > ul {
+            margin: 0 15px;
             li {
                 a {
                     display: flex;
-                    @include padding(12px 15px);
-                    justify-content: space-between;
+                    @include padding(10px 0); 
+                    justify-content: flex-end;
                     @include font-size(18);
                     color: $white;
+                    font-family: $texgyrescholaregular;
+                    letter-spacing: 1px;
                     i {
                         display: flex;
                         align-items: center;                    
@@ -158,6 +166,18 @@
                 }
                 .sub-menu {
                     display: none;
+                }
+            }
+            + ul {
+                border-top: 1px solid $white;
+                margin-top: 15px;
+                @include padding-top(15px); 
+            }
+            &.small-text {
+                li {
+                    a {
+                        @include font-size(14); 
+                    }
                 }
             }
         }

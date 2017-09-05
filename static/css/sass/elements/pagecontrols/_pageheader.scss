@@ -2,12 +2,12 @@
 ================================ */
 .header {
     @include padding(23px 15px);
-    position: fixed;
+    //position: fixed;
     z-index: 999;
     width: $viewportSize;
     @include transition(all 0.3s ease);
     &__fixed {
-        background: rgba($white, 0.9) none repeat scroll 0 0;
+        background: rgba($white, 1) none repeat scroll 0 0;
         @include padding(15px);
         .logo {
             &__main {

@@ -3,7 +3,8 @@
 .footer {
     &__top {
         position: relative;
-        &:before {
+        background: $zblack none repeat scroll 0 0 !important;
+/*        &:before {
             content:'';
             position: absolute;
             top: 0;
@@ -11,7 +12,7 @@
             @include size($viewportSize);
             background: rgba($blue,0.9) none repeat scroll 0 0; 
             z-index: 10;
-        }
+        }*/
         &-content {
             position: relative;
             z-index: 11;
@@ -40,6 +41,7 @@
     
     &__main {
         @include padding(25px 0 40px);
+        background: $zblack none repeat scroll 0 0;
         &-content {
             &-listing {
                 ul {
@@ -47,8 +49,9 @@
                         a {
                             @include transition(all 0.3s ease);
                             display: block;
+                            color: darken($white, 8%);
                             &:hover, &:focus {
-                                color: $blue;
+                                color: $white;
                             }
                         }
                         + li {
@@ -76,6 +79,7 @@
             }
             .disclaimer-text {
                 @include font-size(11);
+                color: darken($white, 8%); 
                 margin-top: 40px;
                 line-height: 1.5;
             }

@@ -2,6 +2,7 @@
    ================================== */
 
 $fonts-roboto-path:        "../fonts/roboto-condensed";
+$fonts-texgyreschola-path:        "../fonts/texgyreschola";
 
 /* Roboto Font */
 @font-face {
@@ -33,4 +34,23 @@ $fonts-roboto-path:        "../fonts/roboto-condensed";
          url('#{$fonts-roboto-path}/RobotoCondensedBold.svg#RobotoCondensedBold') format('svg');
 }
 
+/* texgyreschola Font */
 
+@font-face {
+    font-family: 'texgyrescholaregular';
+    src: url('#{$fonts-texgyreschola-path}/texgyrescholaregular.eot');
+    src: url('#{$fonts-texgyreschola-path}/texgyrescholaregular.eot') format('embedded-opentype'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholaregular.woff2') format('woff2'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholaregular.woff') format('woff'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholaregular.ttf') format('truetype'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholaregular.svg#texgyrescholaregular') format('svg');
+}
+@font-face {
+    font-family: 'texgyrescholabold';
+    src: url('#{$fonts-texgyreschola-path}/texgyrescholabold.eot');
+    src: url('#{$fonts-texgyreschola-path}/texgyrescholabold.eot') format('embedded-opentype'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholabold.woff2') format('woff2'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholabold.woff') format('woff'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholabold.ttf') format('truetype'),
+         url('#{$fonts-texgyreschola-path}/texgyrescholabold.svg#texgyrescholabold') format('svg');
+}

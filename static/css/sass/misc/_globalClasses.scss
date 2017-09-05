@@ -81,6 +81,11 @@
                  color: $blue;
              }
          }
+         &.white-text {
+             h3 {
+                 color: $white;
+             }
+         }
          &.no-lineHeight {
              h1, h2 {
                  line-height: 1 !important;

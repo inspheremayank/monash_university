@@ -35,16 +35,16 @@ $('.responsive-standalone li.dropdown').on('click', function() {
 /***********************************/
 /* card favourite toggle class */
 /**********************************/
-var start = $('.header').offset().top;
-
-$.event.add(window, "scroll", function () {
-    var p = $(window).scrollTop();
-    if (p > start) {
-        $('.header').addClass('header__fixed');
-    } else {
-        $('.header').removeClass('header__fixed');
-    }
-});
+//var start = $('.header').offset().top;
+//
+//$.event.add(window, "scroll", function () {
+//    var p = $(window).scrollTop();
+//    if (p > start) {
+//        $('.header').addClass('header__fixed');
+//    } else {
+//        $('.header').removeClass('header__fixed');
+//    }
+//});
 
 $(".desktop-search .button").on('click', function() {
     var searchActive = $(this).parent(".desktop-search");
