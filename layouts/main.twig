@@ -31,9 +31,11 @@
     <body>
         {{ this.beginBody() }}
         {{ this.render('partials/_header.twig', {network:network, blog:blog}) | raw }}
-        
+        <div class="clearfix"></div>
         {{ content | raw }}
-        
+        <div class="clearfix"></div>
+        {{ this.render('partials/_footer.twig', {network: network}) | raw }}
+        <div class="clearfix"></div>
         {{ this.render('partials/_javascript.twig', {network: network}) | raw }}
         {{ this.endBody() }}
     </body>

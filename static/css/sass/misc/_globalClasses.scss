@@ -72,6 +72,15 @@
              @include font-size(30); 
              font-weight: $weightBold;
          }
+         h3 {
+             @include font-size(18); 
+             font-weight: $weightBold;
+         }
+         &.blue-text {
+             h3 {
+                 color: $blue;
+             }
+         }
          &.no-lineHeight {
              h1, h2 {
                  line-height: 1 !important;

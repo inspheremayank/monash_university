@@ -15,26 +15,110 @@
                 <div class="row">
                     <div class="col-12 col-lg-3">
                         <div class="category__wrapper-content">
-                            <div class="category__wrapper-content-heading">
-                                Headlines
-                                <span class="date">25 August 2017</span>
+                            <div class="category__wrapper-content-head">
+                                <div class="headlines">Headlines</div>
+                                <div class="date">25 August 2017</div>
+                                <div class="content">
+                                    <p>Interviews, explainers TED talks and confereneces from our experts.</p>
+                                    <button class="button button-follow">Follow</button>
+                                    <button class="button button-follow active">Following</button>
+                                </div>
                             </div>
                             <div class="category__wrapper-content-tags">
-                                Headlines
-                                <span class="date">25 August 2017</span>
+                                <ul>
+                                    <li>Law</li>
+                                    <li>Business</li>
+                                    <li class="active">Pharmacy</li>
+                                    <li>Design</li>
+                                    <li>Art</li>
+                                    <li>Science</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-9">
                         <div class="row">
                             <div class="col-12 col-lg-4">
-                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third withoutImage'}) | raw }}
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third withoutImage social facebook'}) | raw }}
                             </div>
                             <div class="col-12 col-lg-4">
-                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third'}) | raw }}
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third social facebook'}) | raw }}
                             </div>
                             <div class="col-12 col-lg-4">
-                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third'}) | raw }}
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third video'}) | raw }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            {% set subscribeBg = "background-image: url('"~network.templatePath~"/static/images/demo.jpg');"%}
+            <div class="subscribe__wrapper text-center image-covered" style="{{subscribeBg}}">
+                <div class="subscribe__wrapper-content">
+                    <h2>Get updates that matter</h2>
+                    <form class="form-section">
+                        <input class="form-control" type="text" placeholder="Enter your email" />
+                        <button class="button button-white" type="submit">Subscribe</button>
+                    </form>
+                    <div class="small-text">
+                        by submitting your email you agree to our <a href="javascript:;">Terms and Conditions</a> and <a href="javascript:;">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="category__wrapper">
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="category__wrapper-content">
+                            <div class="category__wrapper-content-head">
+                                <div class="headlines">Headlines</div>
+                                <div class="date">25 August 2017</div>
+                                <div class="content">
+                                    <p>Interviews, explainers TED talks and confereneces from our experts.</p>
+                                    <button class="button button-follow">Follow</button>
+                                    <button class="button button-follow active">Following</button>
+                                </div>
+                            </div>
+                            <div class="category__wrapper-content-tags">
+                                <ul>
+                                    <li>Law</li>
+                                    <li>Business</li>
+                                    <li class="active">Pharmacy</li>
+                                    <li>Design</li>
+                                    <li>Art</li>
+                                    <li>Science</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third withoutImage social facebook'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third social facebook'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-third video'}) | raw }}
                             </div>
                         </div>
                         <div class="row">

@@ -3,8 +3,8 @@
 /***********************************/
 /* Sidebar Slide in on top */
 /**********************************/
-$('.navigation__main').children().clone().appendTo('.responsive-standalone');
-$('.open-menu').on('click', function (event) {
+$('.navigation__main-menu').children().clone().appendTo('.standalone-menu');
+$('.menu-bar').on('click', function (event) {
     event.preventDefault();
     $('body').addClass('noscroll');
     $('.responsive-standalone').addClass('navigation-active');
@@ -44,6 +44,31 @@ $.event.add(window, "scroll", function () {
     } else {
         $('.header').removeClass('header__fixed');
     }
+});
+
+$(".desktop-search .button").on('click', function() {
+    var searchActive = $(this).parent(".desktop-search");
+    var data = $(this).parent(".desktop-search").find('input').val();
+    if(searchActive.hasClass('active') && data === "") { 
+       searchActive.removeClass("active");
+       $(this).find('.fa').addClass('fa-search').removeClass('fa-close');
+    }
+    else {
+       searchActive.addClass("active"); 
+       $(this).find('.fa').removeClass('fa-search').addClass('fa-close');
+    }
+    return false;
+});
+
+$("#desktopSearch").on('keypress', function(e){
+   if(e.which === 13) {
+       $('#headerSearchForm').submit();
+   }
+});
+
+$('.owl-carousel').owlCarousel({
+    items: 1,
+    responsiveClass: true
 });
 
 $(".chzn-select").chosen({width: '100%', disable_search: true});

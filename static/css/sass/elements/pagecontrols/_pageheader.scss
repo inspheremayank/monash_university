@@ -17,6 +17,12 @@
                 display: block !important;
             }
         }
+        .navigation__main .menu-bar i, .navigation__search .button i {
+            color: $zblack;
+        }
+        .navigation__search .form-control {
+            border-color: $zblack;
+        }
     }
     &__main {
         justify-content: space-between;
@@ -24,7 +30,7 @@
         .logo {
             &__main {
                 display: block;
-                height: 50px;
+                height: 35px; 
             }
             &__scroll {
                 display: none;
@@ -32,8 +38,4 @@
             }
         }
     }
-}
-
-.wrapper {
-    height:2000px;
 }

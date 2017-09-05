@@ -7,7 +7,7 @@
                         <div class="header__main-logo">
                             {% set mainLogo = network.templatePath~'/static/images/logo-white.svg' %}
                             {% set mainLogoScroll = network.templatePath~'/static/images/logo.svg' %}
-                            
+
                             <a href="javascript:;">
                                 <img class="logo__main img-fluid" src="{{mainLogo}}" alt="image" />
                                 <img class="logo__scroll img-fluid" src="{{mainLogoScroll}}" alt="image" />
@@ -15,10 +15,40 @@
                         </div>
                     </aside>
                     <aside class="header__main-right">
-                        sdsd
+                        <div class="navigation__main d-flex align-items-center">
+                            
+                            <form action="{{ url('search') }}" method="GET" id="headerSearchForm">
+                                <div class="navigation__search desktop-search">
+                                    <input class="form-control" id="desktopSearch" name="s" type="text" autocomplete="off" placeholder="Search here" />
+                                    <button class="button"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                            <div class="menu-bar"><i class="fa fa-bars"></i></div>
+                            <div class="navigation__main-menu">
+                                <form action="{{ url('search') }}" method="GET">
+                                    <div class="navigation__search responsive-search">
+                                        <input class="form-control" name="s" type="text" autocomplete="off" placeholder="Search here" />
+                                        <button class="button"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                                <ul>
+                                    <li><a href="@stories">Stories</a></li>
+                                    <li><a href="/about-us">About Us</a></li>
+                                    <li><a href="/list-a-space">List A Space</a></li>
+                                    <li><a href="/enquire-now">Enquire</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
+     <!-- Begin Responsive Profile -->
+    <div class="responsive-standalone">
+        <a href="javascript:;" class="responsive-standalone-close"><span class="fa fa-close" aria-hidden="true"></span></a>
+        <div class="standalone-menu"></div>
+    </div>
+    <div class="responsive-standalone-overlay"></div>
+    <!-- //End Responsive Profile -->
 </header>

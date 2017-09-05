@@ -1,81 +1,83 @@
 /* Page Footer section
 ================================ */
 .footer {
-    background: $baseColor none repeat scroll 0 0;
-    @include padding(80px 0 60px);
-    &__content{
-        color: $white;
-        &-logo {
-            max-width: 60%;
-            @media #{$media-ipadPortrait} {
-                margin: 0 auto;
-                margin-bottom: 20px;
-                text-align: center;
-                max-width: 30%;
-            }
-            @media #{$media-ipadSmall} {
-                margin-bottom: 5px;
-            }
-            a {
-                display: flex;
-                align-items: center; 
-                img {
-                    margin: 0px;
+    &__top {
+        position: relative;
+        &:before {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size($viewportSize);
+            background: rgba($blue,0.9) none repeat scroll 0 0; 
+            z-index: 10;
+        }
+        &-content {
+            position: relative;
+            z-index: 11;
+            color: $white;
+            text-align: center;
+            @include padding(20px);
+        }
+        h2 {
+            @include font-size(20); 
+        }
+        &-listing {
+            ul li {
+                display: inline-block;
+                @include padding(20px 0 0);
+                a {
+                    color :$white;
+                    @include font-size(28);
+                    display: block;
+                }
+                + li {
+                    margin-left: 30px;
                 }
             }
         }
-        &-listing {
-            @media #{$media-ipadSmall} {
-                text-align: center;  
-            }
-            h3 {
-                font-weight: $weightBold;
-                margin-bottom: 10px;
-                @include font-size(15);
-                @media #{$media-ipadSmall} {
-                    margin-top: 15px;
+    }
+    
+    &__main {
+        @include padding(25px 0 40px);
+        &-content {
+            &-listing {
+                ul {
+                    li {
+                        a {
+                            @include transition(all 0.3s ease);
+                            display: block;
+                            &:hover, &:focus {
+                                color: $blue;
+                            }
+                        }
+                        + li {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                &.multiple {
+                    ul {
+                        width: 50%;
+                        float: left;
+                        @media #{$media-tablet} {
+                            width: $viewportSize;
+                        }
+                    }
                 }
             }
-            ul li {
-                margin-bottom: 5px;
+            &-logo {
                 a {
-                    font-weight: $weightLight;
-                    @include font-size(14);
-                }
-            }
-            p {
-                font-weight: $weightLight;
-                margin-bottom: 5px;
-                margin-top: 0px;
-                @include font-size(14); 
-            }
-            &.social {
-                @media #{$media-ipadPortrait} {
-                    margin-top: 15px;
-                    text-align: center;
-                }
-                ul li {
-                    display: inline-block;
-                    + li {
-                        margin-left: 10px; 
-                    }
-                    a {
-                        display: block;
-                        @include border-radius(4px);
-                        background: $defaultbg none repeat scroll 0 0;
-                        @include size(25px);
-                        text-align: center;
-                        i {
-                            @include font-size(14);
-                            line-height: 25px;
-                            color: $white;
-                            margin: 0px;
-                        }
-                        &:hover, &:focus {
-                            background: darken($defaultbg, 8%) none repeat scroll 0 0;
-                        }
+                    display: block;
+                    img {
+                        height: 60px; 
                     }
                 }
+            }
+            .disclaimer-text {
+                @include font-size(11);
+                margin-top: 40px;
+                line-height: 1.5;
             }
         }
     }

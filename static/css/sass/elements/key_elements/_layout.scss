@@ -1,0 +1,105 @@
+/* layout section
+================================ */
+
+/* Begin category section */
+.category__wrapper {
+    border-top: 1px solid $border;
+    @include padding-top(20px);
+    &-content {
+        display: flex;
+        flex-direction: column;
+        @include padding-bottom(20px);
+        height: $viewportSize;
+        justify-content: space-between;
+        &-head {
+            .headlines {
+                @include font-size(20);
+                font-weight: $weightBold;
+                margin-bottom: 5px;
+            }
+            .date {
+                @include font-size(14);
+            }
+            .content {
+                margin-top: 15px;
+                .button-follow {
+                    margin-top: 15px;
+                    border: 1px solid $border;
+                    &.active {
+                        border-color: $blue;
+                        background: $blue none repeat scroll 0 0;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &-tags {
+            margin-top: 20px;
+            li {
+                color: $black; 
+                display: inline-block;
+                @include padding(2px 15px);
+                margin-right: 4px;
+                margin-bottom: 4px;
+                border: 1px solid $border;
+                text-transform: $uppercase;
+                letter-spacing: 1px;
+                
+                &.active {
+                    background: $blue;
+                    border: solid 1px $blue;
+                    color: $white;
+                }
+            }
+        }
+    }  
+}
+/* End category section */
+
+
+/* Begin Subscribe section */
+.subscribe__wrapper {
+    @include padding(45px 0);
+    position: relative;
+    margin-bottom: 20px;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size($viewportSize);
+        background: rgba($blue, 0.9) none repeat scroll 0 0;
+        z-index: 10;
+    }
+    &-content {
+        position: relative;
+        z-index: 11;
+        color: $white;
+        max-width: 500px;
+        margin: 0 auto;
+        h2 {
+            text-transform: uppercase;
+            @include font-size(30);
+            font-weight: $weightBold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .form-section {
+            margin-bottom: 15px;
+            .form-control {
+                width: 60%;
+                margin: 0 auto;
+                @include border-radius(0px); 
+            }
+        }
+        .small-text {
+            @include font-size(12);
+            color: darken($white, 8%);
+            a {
+                border-bottom: 1px solid $white;
+                color: $white; 
+            }
+        }
+    }
+}
+/* End Subscribe section */

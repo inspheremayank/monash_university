@@ -34,20 +34,6 @@ body {
 ul li, ol li {
     font-weight: $weightRegular;
 }
-.category__wrapper {
-    border-top: 3px solid $border;
-    @include padding-top(20px);
-    &-content {
-        display: flex;
-        flex-direction: column;
-        @include padding-bottom(20px);
-        height: $viewportSize;
-        justify-content: space-between;
-    }
-    &-tags {
-        
-    }
-}
 
 /* End Basic Coding
    ================================ */
@@ -67,6 +53,7 @@ ul li, ol li {
 
 @import 'elements/navigation/responsive_navigation';
 @import 'elements/key_elements/cards';
+@import 'elements/key_elements/layout';
 @import 'elements/key_elements/tab_view';
 @import 'elements/key_elements/banner_section';
 @import 'elements/key_elements/articles';

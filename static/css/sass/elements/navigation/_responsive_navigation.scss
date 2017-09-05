@@ -1,13 +1,86 @@
 /* Page Responsive Sidebar section
 ================================ */
 
+
+.navigation {
+    &__main {
+        .menu-bar {
+            cursor: pointer;
+            i {
+                @include font-size(20);
+                color: $white; 
+            }
+        }
+        &-menu {
+            display: none;
+        }
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        .form-control {
+            background: none repeat scroll 0 0;
+            border: none;
+            border-bottom: 2px solid $white;
+            @include border-radius(0);
+            @include padding(0);
+            @include transition(all 0.3s ease);
+            width: 0px;
+            height: 40px;
+            color: $black;
+            @include font-size(14);
+        }
+        .button {
+            @include padding(0);
+            i {
+                color: $white;
+                margin: 0px;
+                @include font-size(20);
+            }
+        }
+        &.active {
+            .form-control {
+                width: 200px;
+                @include padding(8px 25px 8px 12px);
+            }
+        }
+        &.responsive-search {
+            display: none;
+            margin-right: 0px;
+            position: relative;
+            @include padding(0 20px);
+            .form-control {
+                width: $viewportSize;
+            }
+            .button {
+                position: absolute;
+                z-index: 10;
+                right: 20px;
+                top: 50%;
+                @include translate(0, -50%);
+            }
+            @media #{$media-ipadSmall} {
+                display: block;
+            }
+        }
+        &.desktop-search {
+            @media #{$media-ipadSmall} {
+                display: none;
+            }
+        }
+    }
+}
+
 /* Begin responsive menu style */
 
 .responsive-standalone {
     top: 0;
-    width: 229px;
+    width: 280px;
     height: $viewportSize;
-    display: none;
+    //display: none;
+    left: auto;
+    right: 0;
     text-align: left;
     z-index: 99999999;
     visibility: hidden;
@@ -17,21 +90,18 @@
     -ms-user-select: none;
     border-right: 1px solid $border;
     @include transition(all 0.3s ease);
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -moz-transition: translate3d(-100%, 0, 0);
-    -ms-transition: translate3d(-100%, 0, 0);
-    -o-transition: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transition: translate3d(100%, 0, 0);
+    -ms-transition: translate3d(100%, 0, 0);
+    -o-transition: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
     position: fixed !important;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    background: $defaultbg none repeat scroll 0 0;
-    @media #{$media-ipadPortrait} {
-        display: block;
-    }
+    background: rgba($zblack,0.8) none repeat scroll 0 0;
 
-    &.navigation-active {
+    &.navigation-active { 
         visibility: visible;
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transition: translate3d(0, 0, 0);
@@ -44,8 +114,7 @@
         right: 1.5em;
         z-index: 100;
         position: absolute;
-        font-size: .625em;
-        background: rgba(0,0,0,0.3);
+        @include font-size(20);
         padding: .5em 0.85em;
         line-height: 1.5em;
         -moz-border-radius: 3px;
@@ -70,44 +139,26 @@
         @include size(#{$viewportSize});
         top: 0;
         z-index: 10;
+        left: 0;
     }
-    .navigation__search {
-        margin-top: 80px;
-        position: relative;
-        .form-control {
-            @include border-radius(0);
-            height: 50px;
-            @include padding(8px 50px 8px 12px);
-        }
-        .button {
-            position: absolute;
-            height: 50px;
-            right: 0;
-            top: 0;
-            @include padding(0);
-            width: 40px;
-            i {
-                line-height: 50px;
-            }
-        }
-    }
-    > ul {
-        //@include padding-top(80px);
-        li {
-            a {
-                display: flex;
-                @include padding(8px 15px);
-                justify-content: space-between;
-                i {
+    .standalone-menu {
+        @include padding-top(80px);
+        > ul {
+            li {
+                a {
                     display: flex;
-                    align-items: center;                    
+                    @include padding(12px 15px);
+                    justify-content: space-between;
+                    @include font-size(18);
+                    color: $white;
+                    i {
+                        display: flex;
+                        align-items: center;                    
+                    }
                 }
-            }
-            .sub-menu {
-                display: none;
-            }
-            + li {
-                border-top: 1px solid $border;
+                .sub-menu {
+                    display: none;
+                }
             }
         }
     }

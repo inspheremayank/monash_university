@@ -25,13 +25,44 @@
                 top: 0;
                 left: 0;
             }
+            .optionSet {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                width: 85px;
+                @include opacity(0);
+                @include transition(all 0.3s ease);
+                z-index: 11;
+                li {
+                    color: $white;
+                    @include padding(5px 10px);
+                    @include font-size(13);
+                    position: relative;
+                    background: $black none repeat scroll 0 0; 
+                    + li {
+                        border-top: 1px solid darken($white, 8%);
+                    }
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        @include translate(0,-50%);
+                        text-align: center;
+                        width: 30px;
+                    }
+                    &:hover, &:focus {
+                        background: lighten($black, 8%) none repeat scroll 0 0;
+                    }  
+                }
+            }
             .content__section {
                 position: relative;
                 z-index: 20;
                 color: $white;
                 @include padding(20px);
                 &-channel {
-                    @include padding(5px 25px);
+                    @include padding(5px 15px);
+                    @include font-size(13);
                     text-transform: uppercase;
                     background: $blue none repeat scroll 0 0;
                     display: inline-block;
@@ -64,11 +95,21 @@
                 }
             }
         }
+        a {
+            &:hover, &:focus {
+                .card__view-content .optionSet {
+                    @include opacity(1);
+                }
+            }
+        }
         /* Begin card Full style */
         &-full {
             &.single {
                 .card__view-content {
                     height: 600px;
+                    .optionSet{
+                        top: 100px;
+                    }
                     .content__section {
                         @include padding(0px 15px 50px);
                         width: 1140px;
@@ -85,13 +126,19 @@
                         @media #{$media-tablet} {
                             width: $viewportSize; 
                         }
+                        &-channel{
+                            @include padding(5px 25px); 
+                            @include font-size(14); 
+                        }
                         &-heading {
                             @include font-size(48); 
                             font-weight: $weightBold;
-                            margin-bottom: 15px; 
+                            margin-bottom: 15px;
+                            max-width: 500px;
                         }
                         &-description {
                             display: block;
+                            max-width: 600px;
                         }
                     }
                 }
@@ -109,9 +156,111 @@
                 figure {
                     display: none;
                 }
-            }
+            } 
         }
 
         /* End card without image style */
+        
+        
+        /* Begin card Social icons style */
+        &.social {
+            .card__view-content {
+                .social-icons {
+                    display: block;
+                    text-align: center;
+                    @include size(30px);
+                    @include border-radius(50%);
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 11;
+                    &:before {
+                        content: '';
+                        font-family: $iconfont;
+                        @include font-size(14);
+                        line-height: 30px;
+                        color: $white;
+                    }
+                }
+            }
+            &.facebook {
+                .card__view-content {
+                    .social-icons {
+                        background: $facebook none repeat scroll 0 0;
+                        &:before {
+                            content: '\f09a';
+                        }
+                    }
+                }
+            }
+            &.twitter {
+                .card__view-content {
+                    .social-icons {
+                        background: $twitter none repeat scroll 0 0;
+                        &:before {
+                            content: '\f099';
+                        }
+                    }
+                }
+            }
+            &.vimeo {
+                .card__view-content {
+                    .social-icons {
+                        background: $vimeo none repeat scroll 0 0;
+                        &:before {
+                            content: '\f27d';
+                        }
+                    }
+                }
+            }
+            &.youtube {
+                .card__view-content {
+                    .social-icons {
+                        background: $youtube none repeat scroll 0 0;
+                        &:before {
+                            content: '\f167';
+                        }
+                    }
+                }
+            }
+            &.instagram {
+                .card__view-content {
+                    .social-icons {
+                        background: $instagram none repeat scroll 0 0;
+                        &:before {
+                            content: '\f16d';
+                        }
+                    }
+                }
+            }
+        } 
+        /* End card Social icons style */
+        
+        /* Begin card video icons style */
+        &.video {
+            .card__view-content {
+                .content__section {
+                    &-play {
+                        @include size(50px);
+                        @include border-radius(50%);
+                        border: 1px solid darken(white, 5%);
+                        margin-bottom: 15px;
+                        position: relative; 
+                        &:after {
+                            content:'\f04b';
+                            font-family: $iconfont;
+                            @include font-size(20);
+                            color: darken(white, 5%);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            @include translate(-50%,-50%);
+                            cursor: pointer;
+                        } 
+                    }
+                }
+            }
+        }
+        /* End card video icons style */
     }
 }
