@@ -16,7 +16,25 @@
         }
     }
     &__login {
-        
+        margin-right: 30px;
+        &-nav {
+            a {
+                @include transition(all 0.3s ease);
+                + a {
+                    &:before {
+                        content:'|';
+                        @include padding(0 10px);
+                    }
+                }
+                &:hover, &:focus {
+                    color: $blue;
+                }
+            }
+        }
+        &-user-image {
+            @include size(40px);
+            cursor: pointer;
+        }
     }
     &__search {
         display: flex;

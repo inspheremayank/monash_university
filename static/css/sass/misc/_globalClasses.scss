@@ -65,16 +65,16 @@
         @include padding(15px 0);
          h1 {
              @include font-size(43);
-             font-weight: $weightBold;
              line-height: 1.2;
+             letter-spacing: 1px;
          }
          h2 {
-             @include font-size(30); 
-             font-weight: $weightBold;
+             @include font-size(30);
+             letter-spacing: 1px;
          }
          h3 {
-             @include font-size(18); 
-             font-weight: $weightBold;
+             @include font-size(20);
+             letter-spacing: 1px;
          }
          &.blue-text {
              h3 {
@@ -90,6 +90,9 @@
              h1, h2 {
                  line-height: 1 !important;
              }
+         }
+         &.with-border {
+             border-bottom: 1px solid $borderlight;
          }
     }
 }

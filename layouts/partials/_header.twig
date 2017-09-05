@@ -21,8 +21,15 @@
                                     <a href="javascript:;">Login</a>
                                     <a href="javascript:;">Signup</a>
                                 </div>
-                                <div class="navigation__login-user">
-                                    sd
+                                <div class="navigation__login-user d-none">
+                                    {% set profileImage = network.templatePath~'/static/images/demo.jpg' %}
+                                    <div class="navigation__login-user-image image-covered rounded-circle" data-toggle="dropdown" style="background-image: url('{{profileImage}}');"></div>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
                                 </div>
                             </div>
                             <form action="{{ url('search') }}" method="GET" id="headerSearchForm">

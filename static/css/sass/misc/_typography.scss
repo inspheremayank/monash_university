@@ -113,13 +113,13 @@ html, body {
 // Headings
 // ================================
 h1, h2, h3 {
-    font-family: $primaryFont;
+    font-family: $secondaryFont-bold;
 }
 h4, h5, h6 {
-    font-family: $primaryFont;
+    font-family: $secondaryFont-regular;
 }
 .form-section h2{
-    font-family: $primaryFont; 
+    font-family: $secondaryFont-bold;
 }
 .header-heading {
     margin-bottom: 15px; 
