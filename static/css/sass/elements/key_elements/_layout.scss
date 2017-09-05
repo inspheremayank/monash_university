@@ -62,14 +62,16 @@
     @include padding(45px 0);
     position: relative;
     margin-bottom: 20px;
-    &:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        @include size($viewportSize);
-        background: rgba($blue, 0.9) none repeat scroll 0 0;
-        z-index: 10;
+    &.bgImg {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size($viewportSize);
+            background: rgba($blue, 0.9) none repeat scroll 0 0;
+            z-index: 10;
+        }
     }
     &-content {
         position: relative;
@@ -79,8 +81,8 @@
         margin: 0 auto;
         h2 {
             text-transform: uppercase;
-            @include font-size(30);
-            font-weight: $weightBold;
+            @include font-size(24);
+            font-weight: $weightRegular; 
             letter-spacing: 1px;
             margin-bottom: 15px;
         }

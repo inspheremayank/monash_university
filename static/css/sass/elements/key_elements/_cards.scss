@@ -70,7 +70,7 @@
                 }
                 &-heading {
                     @include font-size(24);
-                    font-weight: $weightBold;
+                    font-weight: $weightRegular;
                 }
                 &-description {
                     display: none; 
@@ -132,23 +132,20 @@
                         }
                         &-heading {
                             @include font-size(48); 
-                            font-weight: $weightBold;
+                            font-weight: $weightRegular;
                             margin-bottom: 15px;
-                            max-width: 500px;
+                            max-width: 800px;
                         }
                         &-description {
                             display: block;
-                            max-width: 600px;
+                            max-width: 700px;
                         }
                     }
                 }
             }
         }
-        /* Begin card Full style */
-        &-third {
-            .card__view-content {
-            }
-        }
+        /* End card Full style */
+        
         /* Begin card without image style */
         &.withoutImage {
             .card__view-content {

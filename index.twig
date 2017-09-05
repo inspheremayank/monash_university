@@ -1,6 +1,6 @@
 {% set network = _Network.getNetworkData() %}
 {{set(this,'title',(network.title))}}
-{#
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 px-0">
@@ -66,7 +66,7 @@
     <div class="row">
         <div class="col-12 px-0">
             {% set subscribeBg = "background-image: url('"~network.templatePath~"/static/images/demo.jpg');"%}
-            <div class="subscribe__wrapper text-center image-covered" style="{{subscribeBg}}">
+            <div class="subscribe__wrapper text-center bgImg image-covered" style="{{subscribeBg}}">
                 <div class="subscribe__wrapper-content">
                     <h2>Get updates that matter</h2>
                     <form class="form-section">
@@ -134,4 +134,4 @@
             </div>
         </div>
     </div>
-</div>#}
+</div>
