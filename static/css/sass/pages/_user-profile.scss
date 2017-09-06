@@ -1,0 +1,15 @@
+/* User profile style
+   ================================== */
+
+.user {
+    &__profile {
+        &-banner {
+            height: 600px;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 10;
+            }
+        }
+    }
+}

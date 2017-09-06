@@ -1,0 +1,46 @@
+{% set network = _Network.getNetworkData() %}
+{{set(this,'title',(blog.title))}}
+
+<div class="page__content-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <div class="user__profile">
+                    {% set userImg = "background-image: url('"~network.templatePath~"/static/images/demo.jpg')" %}
+                    <div class="user__profile-banner image-covered" style="{{userImg}}">
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="load__more">
+                                <button class="button">Load More</button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
