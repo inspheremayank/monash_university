@@ -7,8 +7,12 @@
                         <div class="header__main-logo">
                             {% set mainLogo = network.templatePath~'/static/images/logo-white.svg' %}
                             {% set mainLogoScroll = network.templatePath~'/static/images/logo.svg' %}
+                            {% set logoUrl = network.networkLogoLinkUrl %}
+                            {% if network.logoMedia | length > 0 %}
+                                {% set mainLogo = _Media.getMediaUrl(network.logoMedia, 177, 65, {'crop': 'limit'} )%}
+                            {% endif %}
 
-                            <a href="javascript:;">
+                            <a href="{{logoUrl}}">
                                 <img class="logo__main img-fluid" src="{{mainLogo}}" alt="image" />
                                 <img class="logo__scroll img-fluid" src="{{mainLogoScroll}}" alt="image" />
                             </a>
@@ -17,20 +21,24 @@
                     <aside class="header__main-right">
                         <div class="navigation__main d-flex align-items-center">
                             <div class="navigation__login">
+                                <!--
                                 <div class="navigation__login-nav">
                                     <a href="javascript:;">Login</a>
                                     <a href="javascript:;">Signup</a>
                                 </div>
-                                <div class="navigation__login-user d-none">
-                                    {% set profileImage = network.templatePath~'/static/images/demo.jpg' %}
-                                    <div class="navigation__login-user-image image-covered rounded-circle" data-toggle="dropdown" style="background-image: url('{{profileImage}}');"></div>
+                                -->
+                                {% if not _User.isGuest()%}
+                                    {% set user = _User.getUser()%}
+                                    <div class="navigation__login-user">
+                                        {% set profileImage = _Media.getMediaUrl(user.profileMedia, 80, 80, {radius: 'max', gravity: 'face', 'crop': 'thumb', 'type' : 'user'}) %}
+                                        <div class="navigation__login-user-image image-covered rounded-circle" data-toggle="dropdown" style="background-image: url('{{profileImage}}');"></div>
 
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">My Profile</a>
+                                            <a class="dropdown-item" href="{{_AppHelper.getLogoffUrl()}}">Logout</a>
+                                        </div>
                                     </div>
-                                </div>
+                                {% endif %}
                             </div>
                             <form action="{{ url('search') }}" method="GET" id="headerSearchForm">
                                 <div class="navigation__search desktop-search">
@@ -46,25 +54,21 @@
                                         <button class="button"><i class="fa fa-search"></i></button>
                                     </div>
                                 </form>
-                                <ul>
-                                    <li><a href="javascript:;">Medicine and Health</a></li>
-                                    <li><a href="javascript:;">Business and Economy</a></li>
-                                    <li><a href="javascript:;">Politics and Society</a></li>
-                                    <li><a href="javascript:;">Education</a></li>
-                                    <li><a href="javascript:;">Innovation</a></li>
-                                    <li><a href="javascript:;">Environment</a></li>
-                                    <li><a href="javascript:;">Design and Architecture</a></li>
-                                    <li><a href="javascript:;">Technology</a></li>
-                                </ul>
-                                <ul class="small-text">
-                                    <li><a href="javascript:;">Terms of use</a></li>
-                                    <li><a href="javascript:;">Privacy policy</a></li>
-                                    <li><a href="javascript:;">About</a></li>
-                                    <li><a href="javascript:;">Monash university</a></li>
-                                </ul>
-                                <ul>
-                                    <li><a href="javascript:;">Subscribe</a></li>
-                                </ul>
+                                {% set menuItems = blog.blogHeaderMenu %}
+                                {% for i in 0..4 %}
+                                    {% if menuItems[i] is defined %}
+                                        {% set hasChildren = menuItems[i].children is defined and menuItems[i].children | length > 0 ? true : false %} 
+                                        {% if hasChildren %}
+                                            <ul>
+                                            {% for childItem in menuItems[i].children%}
+                                                {% set externalClass = (childItem.isExternal) ? 'external-link' : '' %}
+                                                {% set name = ((childItem.label is empty) ? ((childItem.pageTitle is empty)? childItem.blogTitle : childItem.pageTitle) : childItem.label) %}
+                                                <li><a href="{{childItem.link |raw}}" {% if childItem.target != "" %}target="{{childItem.target}}"{% endif %}>{{ name }}</a></li>
+                                            {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     </aside>
