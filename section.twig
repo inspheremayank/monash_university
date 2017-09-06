@@ -1,0 +1,160 @@
+{% set network = _Network.getNetworkData() %}
+{{set(this,'title',(blog.title))}}
+
+<div class="page__content-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                {{ this.render('partials/_single-article.twig', {network:network, class: 'card__view-full single'}) | raw }}
+                <div class="section__wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-md-8 col-lg-9">
+                                        <div class="section__wrapper-content">
+                                            <div class="section__head lighter">
+                                                <h2>The lenses of change</h2>
+                                            </div>
+                                            <p>From populism to artificail intelligence the forces shaping our world are becoming more complex. These need new perspectives, and crucially, many lenses to fully understand. Monash University has brought together a network of experts from many disciplines to understand these forces of change.</p>
+                                            <div class="category__wrapper-content-tags">
+                                                <ul>
+                                                    <li>Law</li>
+                                                    <li>Business</li>
+                                                    <li class="active">Pharmacy</li>
+                                                    <li>Design</li>
+                                                    <li>Art</li>
+                                                    <li>Science</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="followers__grid">
+                                            <h3>Featured Experts</h3>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <div class="d-flex">
+                                                            <figure>
+                                                                <img class="img-fluid rounded-circle" src="{{network.templatePath}}/static/images/demo.jpg" alt="image" />
+                                                            </figure>
+                                                            <div class="followers__grid-content">
+                                                                <h4>Sylvia Dawson</h4>
+                                                                <p>Ethicist, Novelist.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="followers__grid-follow"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <div class="d-flex">
+                                                            <figure>
+                                                                <img class="img-fluid rounded-circle" src="{{network.templatePath}}/static/images/demo.jpg" alt="image" />
+                                                            </figure>
+                                                            <div class="followers__grid-content">
+                                                                <h4>Sylvia Dawson</h4>
+                                                                <p>Ethicist, Novelist.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="followers__grid-follow"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <div class="d-flex">
+                                                            <figure>
+                                                                <img class="img-fluid rounded-circle" src="{{network.templatePath}}/static/images/demo.jpg" alt="image" />
+                                                            </figure>
+                                                            <div class="followers__grid-content">
+                                                                <h4>Sylvia Dawson</h4>
+                                                                <p>Ethicist, Novelist.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="followers__grid-follow"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <div class="d-flex">
+                                                            <figure>
+                                                                <img class="img-fluid rounded-circle" src="{{network.templatePath}}/static/images/demo.jpg" alt="image" />
+                                                            </figure>
+                                                            <div class="followers__grid-content">
+                                                                <h4>Sylvia Dawson</h4>
+                                                                <p>Ethicist, Novelist.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="followers__grid-follow"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section__head lighter text-center py-4">
+                                    <h2>In this series</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                            </div>
+                        </div>                     
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                {{ this.render('partials/_cta-text.twig', {network:network}) | raw }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: 'withoutImage'}) | raw }}
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                {{ this.render('partials/_single-article.twig', {network:network, class: ''}) | raw }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="load__more">
+                                    <button class="button">Load More</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

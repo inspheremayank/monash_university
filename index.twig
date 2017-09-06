@@ -65,19 +65,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 px-0">
-            {% set subscribeBg = "background-image: url('"~network.templatePath~"/static/images/demo.jpg');"%}
-            <div class="subscribe__wrapper text-center bgImg image-covered" style="{{subscribeBg}}">
-                <div class="subscribe__wrapper-content">
-                    <h2>Get updates that matter</h2>
-                    <form class="form-section">
-                        <input class="form-control" type="text" placeholder="Enter your email" />
-                        <button class="button button-white" type="submit">Subscribe</button>
-                    </form>
-                    <div class="small-text">
-                        by submitting your email you agree to our <a href="javascript:;">Terms and Conditions</a> and <a href="javascript:;">Privacy Policy</a>
-                    </div>
-                </div>
-            </div>
+            {{ this.render('partials/_subscribe.twig', {network:network}) | raw }}
         </div>
     </div>
 </div>

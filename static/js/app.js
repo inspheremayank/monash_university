@@ -29,7 +29,7 @@ $(".responsive-standalone-overlay").on('click', function () {
     $(".responsive-standalone-overlay").hide();
     $('body').removeClass('noscroll');
 });
-$('.responsive-standalone li.dropdown').on('click', function() {
+$('.responsive-standalone li.dropdown').on('click', function () {
     $(this).addClass('active').children('.sub-menu').slideToggle();
 });
 /***********************************/
@@ -46,24 +46,23 @@ $('.responsive-standalone li.dropdown').on('click', function() {
 //    }
 //});
 
-$(".desktop-search .button").on('click', function() {
+$(".desktop-search .button").on('click', function () {
     var searchActive = $(this).parent(".desktop-search");
     var data = $(this).parent(".desktop-search").find('input').val();
-    if(searchActive.hasClass('active') && data === "") { 
-       searchActive.removeClass("active");
-       $(this).find('.fa').addClass('fa-search').removeClass('fa-close');
-    }
-    else {
-       searchActive.addClass("active"); 
-       $(this).find('.fa').removeClass('fa-search').addClass('fa-close');
+    if (searchActive.hasClass('active') && data === "") {
+        searchActive.removeClass("active");
+        $(this).find('.fa').addClass('fa-search').removeClass('fa-close');
+    } else {
+        searchActive.addClass("active");
+        $(this).find('.fa').removeClass('fa-search').addClass('fa-close');
     }
     return false;
 });
 
-$("#desktopSearch").on('keypress', function(e){
-   if(e.which === 13) {
-       $('#headerSearchForm').submit();
-   }
+$("#desktopSearch").on('keypress', function (e) {
+    if (e.which === 13) {
+        $('#headerSearchForm').submit();
+    }
 });
 
 $('.owl-carousel').owlCarousel({
@@ -101,7 +100,10 @@ $(".regular").slick({
     ]
 });
 
- $("#socialFix").sticky({ topSpacing: 0 });
+$("#socialFix").sticky({topSpacing: 0});
 
+$(".followers__grid-follow").on('click', function() {
+    $(this).toggleClass('following');
+});
 $(".chzn-select").chosen({width: '100%', disable_search: true});
 $(".chzn-search").chosen({width: '100%'});

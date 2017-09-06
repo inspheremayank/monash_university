@@ -1,0 +1,18 @@
+/* Section page style
+   ================================== */
+
+.section {
+    &__wrapper {
+        margin: 40px 0;
+        &-content {
+            p {
+                @include font-size(18);
+                line-height: 1.56;
+                letter-spacing: 1.8px;
+            }
+            .category__wrapper-content-tags {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

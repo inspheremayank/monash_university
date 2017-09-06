@@ -41,10 +41,10 @@
                 @include padding(2px 15px);
                 margin-right: 4px;
                 margin-bottom: 4px;
-                border: 1px solid $border;
+                border: 1px solid $borderlight;
                 text-transform: $uppercase;
                 letter-spacing: 1px;
-                
+
                 &.active {
                     background: $blue;
                     border: solid 1px $blue;
@@ -90,18 +90,108 @@
             margin-bottom: 15px;
             .form-control {
                 width: 60%;
-                margin: 0 auto;
+                margin: 0 auto 20px; 
                 @include border-radius(0px); 
             }
         }
         .small-text {
             @include font-size(12);
             color: darken($white, 8%);
+            margin-top: 35px;
             a {
                 border-bottom: 1px solid $white;
                 color: $white; 
             }
         }
+        .button {
+            border-color: $white;
+            @include font-size(18);
+            letter-spacing: 3px;
+            &.button-sized {
+                width: 40%;
+            }
+        }
+        &.extended-space {
+            max-width: 800px;
+            p {
+                @include font-size(18);
+                letter-spacing: 2px;
+                line-height: 1.5;
+            }
+        }
     }
 }
 /* End Subscribe section */
+
+
+/* Begin Follow grid section */
+
+.followers {
+    &__grid {
+        h3 {
+            @include font-size();
+            font-family: $secondaryFont-regular;
+            text-transform: uppercase;
+            border-bottom: 1px solid $borderlight;
+            text-align: center;
+            @include padding-bottom(8px);
+        }
+        ul li {
+            width: $viewportSize;
+            a {
+                @include flexbox();
+                align-items: center;
+                width: $viewportSize;
+                justify-content: space-between;
+                @include padding(15px 0);
+            }
+            figure {
+                @include size(40px);
+                margin-right: 20px;
+                img {
+                    @include size($viewportSize);
+                    object-fit: cover; 
+                }
+            }
+        }
+        &-content {
+            margin-right: 20px;
+            h4 {
+                @include font-size(14);
+                letter-spacing: 1.5px;
+                font-family: $secondaryFont-bold;
+                margin-bottom: 8px;
+            }
+            p {
+                margin-bottom: 0px;
+                letter-spacing: 1px;
+            }
+        }
+        &-follow {
+            @include size(20px);
+            border: 1px solid $black;
+            @include border-radius(50%);
+            position: relative;
+            cursor: pointer;
+            z-index: 10;
+            &:before {
+                content: '\f067';
+                font-family: $iconfont; 
+                @include font-size(11);
+                line-height: 1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%,-50%);
+            }
+            &.following {
+                &:before {
+                    content: '\f00d';
+                }
+            }
+        }
+    }
+}
+
+/* End Follow grid section */
+

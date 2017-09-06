@@ -133,7 +133,7 @@
         transform: translate3d(0, 0, 0);
     }
     &-close {
-        top: 1.5em;
+        top: 0.5em;
         right: 0;
         z-index: 100;
         position: absolute;
@@ -165,7 +165,7 @@
         left: 0;
     }
     .standalone-menu {
-        @include padding-top(80px);
+        @include padding-top(70px);
         > ul {
             margin: 0 15px;
             li {

@@ -63,37 +63,44 @@
 .section {
     &__head {
         @include padding(15px 0);
-         h1 {
-             @include font-size(43);
-             line-height: 1.2;
-             letter-spacing: 1px;
-         }
-         h2 {
-             @include font-size(30);
-             letter-spacing: 1px;
-         }
-         h3 {
-             @include font-size(20);
-             letter-spacing: 1px;
-         }
-         &.blue-text {
-             h3 {
-                 color: $blue;
-             }
-         }
-         &.white-text {
-             h3 {
-                 color: $white;
-             }
-         }
-         &.no-lineHeight {
-             h1, h2 {
-                 line-height: 1 !important;
-             }
-         }
-         &.with-border {
-             border-bottom: 1px solid $borderlight;
-         }
+        h1 {
+            @include font-size(43);
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+        h2 {
+            @include font-size(30);
+            letter-spacing: 1px;
+        }
+        h3 {
+            @include font-size(20);
+            letter-spacing: 1px;
+        }
+        &.blue-text {
+            h3 {
+                color: $blue;
+            }
+        }
+        &.white-text {
+            h3 {
+                color: $white;
+            }
+        }
+        &.no-lineHeight {
+            h1, h2 {
+                line-height: 1 !important;
+            }
+        }
+        &.with-border {
+            border-bottom: 1px solid $borderlight;
+        }
+        &.lighter {
+            h2 {
+                @include font-size(30);
+                letter-spacing: 2px;
+                font-family: $secondaryFont-regular;
+            }
+        }
     }
 }
 .page__section-head {
@@ -129,23 +136,7 @@
         }
     }
 }
-.channels {
-    &__1 {
-        background: $blue none repeat scroll 0 0;
-    }
-    &__2 {
-        background: $green none repeat scroll 0 0;
-    }
-    &__3 {
-        background: $brown none repeat scroll 0 0;
-    }
-    &__4 {
-        background: $grey none repeat scroll 0 0;
-    }
-    &__5 {
-        background: $black none repeat scroll 0 0; 
-    }
-}
+
 .no-data {
     @include font-size();
     margin: 60px 0 15px; 
@@ -153,4 +144,17 @@
     background: darken($white, 5%) none repeat scroll 0 0;
     border: 1px solid darken($white, 8%);
     @include border-radius(4px);
+}
+.load__more {
+    width: $viewportSize;
+    text-align: center;
+    margin: 40px 0;
+    .button {
+        @include font-size(16);
+        @include padding(8px 30px);
+        background: $blue none repeat scroll 0 0 !important;
+        @include border-radius(1px);
+        text-transform: uppercase;
+        color: $white;
+    }
 }
